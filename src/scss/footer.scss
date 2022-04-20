@@ -27,8 +27,10 @@
     // .footer__left
 
     &__left {
+        @include adaptiveValue("height", 120, 70);
+
         img {
-            @include adaptiveValue("height", 100, 50);
+            height: 100%;
         }
 
         margin-right: rem(10);
@@ -38,7 +40,7 @@
         background: #F3F3F3;
         box-shadow: -20px -20px 50px #FFFFFF,
         20px 20px 50px #D2D2D2;
-        border-top: 1px solid $mainBorder;
+        // border-top: 1px solid $mainBorder;
     }
 
     // .footer__center
@@ -62,7 +64,7 @@
         a {
             display: inline-block;
             transition: all 0.8s ease 0s;
-            
+
             &:not(:last-child) {
                 padding-right: rem(10);
             }
@@ -100,18 +102,23 @@
     // .footer__right
 
     &__right {
+        @include adaptiveValue("height", 120, 70);
+
         img {
-            @include adaptiveValue("height", 100, 50);
+            height: 100%;
         }
 
-        margin-right: rem(10);
         padding: rem(8) rem(20);
         text-align: center;
         border-radius: 15px;
         background: #F3F3F3;
         box-shadow: -20px -20px 50px #FFFFFF,
         20px 20px 50px #D2D2D2;
-        border-top: 1px solid $mainBorder;
+        // border-top: 1px solid $mainBorder;
+        
+        @media (max-width:$tablet){
+            margin-right: rem(10);
+        }
 
     }
 }
@@ -145,7 +152,7 @@
         box-shadow: -10px -10px 20px #FFFFFF,
             10px 10px 20px rgba(0, 0, 0, 0.09);
         border-radius: 15px;
-        border-top: 1px solid $mainBorder;
+        // border: 1px solid $mainBorder;
 
 
 
@@ -229,7 +236,7 @@
             box-shadow: -10px -10px 20px #FFFFFF,
                 10px 10px 20px rgba(0, 0, 0, 0.09);
             border-radius: 15px;
-            border-top: 1px solid $mainBorder;
+            // border: 1px solid $mainBorder;
 
             transition: color 0.8s ease 0s;
 

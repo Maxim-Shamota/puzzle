@@ -52,7 +52,8 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
-	background: #E9EAF0;
+	// background: #E9EAF0;
+	background: #F3F3F3;
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -136,4 +137,6 @@ body {
 @import "footer";
 
 // Подключение стилей отдельных страниц
-@import "home";
+@import "installCab";
+@import "installCorner";
+@import "installCurtain";

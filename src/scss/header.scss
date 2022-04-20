@@ -72,7 +72,7 @@
 		background: #F3F3F3;
 		box-shadow: -10px 0px 20px #FFFFFF,
 		10px 10px 20px rgba(0, 0, 0, 0.09);
-		border-top: 1px solid $mainBorder;
+		border: 1px solid $mainBorder;
 
 	}
 
@@ -167,7 +167,7 @@
 		box-shadow: -10px -10px 20px #FFFFFF,
 			10px 10px 20px rgba(0, 0, 0, 0.09);
 		border-radius: 15px;
-		border-top: 1px solid $mainBorder;
+		border: 1px solid $mainBorder;
 
 
 
@@ -273,7 +273,7 @@
 			box-shadow: -10px -10px 20px #FFFFFF,
 				10px 10px 20px rgba(0, 0, 0, 0.09);
 			border-radius: 15px;
-			border-top: 1px solid $mainBorder;
+			border: 1px solid $mainBorder;
 
 			transition: color 0.8s ease 0s;
 
