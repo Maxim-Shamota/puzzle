@@ -103,7 +103,6 @@
 	align-items: center;
 	justify-content: start;
 	min-height: 40px;
-	font-size: rem(16);
 	z-index: 5;
 	flex: 1 1 100%;
 
@@ -121,7 +120,7 @@
 		@include adaptiveValue("padding-right", 30, 5);
 		transition: all 0.8s ease 0s;
 		display: inline-block;
-		@include adaptiveValue("font-size", 18, 14);
+		@include adaptiveValue("font-size", 16, 14);
 
 		&::after {
 			content: '';

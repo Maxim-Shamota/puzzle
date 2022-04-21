@@ -76,6 +76,10 @@
         @media (max-width:$mobile) {
             max-width: 100%;
         }
+
+        p {
+            text-indent: rem(40);
+        }
     }
 }
 
@@ -117,10 +121,6 @@
         padding-top: rem(30);
     }
 
-    // .cabin-tabs__body
-
-    &__body {}
-
     .cabin-tabs1 {
 
         // .cabin-tabs1__body
@@ -147,11 +147,13 @@
 
         &__up-descr {
             @include adaptiveValue("font-size", 18, 16);
-            // @include adaptiveValue("font-size", 20, 18);
+            text-indent: rem(30);
             padding: rem(15) rem(10);
             @include adaptiveValue("line-height", 22, 18);
 
             p {
+                text-indent: rem(30);
+
                 &:not(:last-child) {
                     padding-bottom: rem(10);
                 }
@@ -251,9 +253,9 @@
             }
 
             &._spoller-active {
-                &::before{
-                    transform: rotate(-180deg);  
-                    color: $mainColor1;                  
+                &::before {
+                    transform: rotate(-180deg);
+                    color: $mainColor1;
                 }
             }
         }
@@ -261,7 +263,6 @@
         // .cabin-spoll1__body
 
         &__body {
-            padding: rem(20) 0px;
             @include adaptiveValue("margin-left", 30, 0);
             @include adaptiveValue("font-size", 16, 14);
 
@@ -290,6 +291,12 @@
                         transform: scale(1.1);
                     }
                 }
+            }
+
+            p {
+                text-indent: rem(30);
+                padding-bottom: rem(10);
+                @include adaptiveValue("padding-right", 30, 5);
             }
         }
     }
@@ -347,6 +354,12 @@
             padding: rem(20) 0px;
             @include adaptiveValue("margin-left", 30, 0);
             @include adaptiveValue("font-size", 16, 14);
+
+            p {
+                text-indent: rem(30);
+                padding-bottom: rem(10);
+                @include adaptiveValue("padding-right", 30, 5);
+            }
         }
     }
 
@@ -434,6 +447,12 @@
                     }
                 }
             }
+
+            p {
+                text-indent: rem(30);
+                padding-bottom: rem(10);
+                @include adaptiveValue("padding-right", 30, 5);
+            }
         }
     }
 
@@ -490,6 +509,12 @@
             padding: rem(20) 0px;
             @include adaptiveValue("margin-left", 30, 0);
             @include adaptiveValue("font-size", 16, 14);
+
+            p {
+                text-indent: rem(30);
+                padding-bottom: rem(10);
+                @include adaptiveValue("padding-right", 30, 5);
+            }
         }
     }
 
@@ -581,6 +606,12 @@
                     }
                 }
             }
+
+            p {
+                text-indent: rem(30);
+                padding-bottom: rem(10);
+                @include adaptiveValue("padding-right", 30, 5);
+            }
         }
     }
 
@@ -637,9 +668,102 @@
             padding: rem(20) 0px;
             @include adaptiveValue("margin-left", 30, 0);
             @include adaptiveValue("font-size", 16, 14);
+
+            p {
+                text-indent: rem(30);
+                padding-bottom: rem(10);
+                @include adaptiveValue("padding-right", 30, 5);
+            }
         }
     }
-
 }
 
 //========================================================================================================================================================
+
+.cabin-price {
+
+    // .cabin-price__title
+
+    &__title {
+        text-align: center;
+        font-weight: 600;
+        @include adaptiveValue("font-size", 24, 20);
+        padding-top: rem(10);
+    }
+
+    // .cabin-price__items
+
+    &__items {
+        @include adaptiveValue("padding-top", 50, 30);
+        display: flex;
+        gap: rem(30);
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    // .cabin-price__item
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        max-width: rem(280);
+        background: #F3F3F3;
+        box-shadow: -20px -20px 30px #FFFFFF,
+            20px 20px 50px #D2D2D2;
+        border-radius: 15px;
+        height: 430px;
+        overflow: hidden;
+    }
+
+    // .cabin-price__image
+
+    &__image {
+        border-radius: rem(10) rem(10) 0 0;
+        flex: 1 1 auto;
+        overflow: hidden;
+        transition: all 1s ease 0s;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    // .cabin-price__descr
+
+    &__descr {}
+}
+
+.descr-cabPrice {
+    padding: rem(20);
+
+    // .descr-cabPrice__title
+
+    &__title {
+        font-weight: 500;
+        font-size: rem(18);
+    }
+
+    // .descr-cabPrice__subtitle
+
+    &__subtitle {
+        padding-top: rem(7);
+        font-style: italic;
+        text-align: right;
+        font-size: rem(16);
+    }
+
+    // .descr-cabPrice__price
+
+    &__price {
+        color: $mainColor1;
+    }
+}
