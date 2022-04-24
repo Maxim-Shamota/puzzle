@@ -1,0 +1,179 @@
+.stock-wrapper {}
+
+.stock {
+
+    // .stock__title
+
+    &__title {
+        text-align: center;
+        font-weight: 600;
+        @include adaptiveValue("font-size", 24, 20);
+        padding-top: rem(10);
+    }
+
+    &__items {
+        @include adaptiveValue("padding-top", 50, 30);
+        display: flex;
+        gap: rem(30);
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        // .stock__item
+
+        .stock__item {
+            display: flex;
+            flex-direction: column;
+            max-width: rem(330);
+            background: #F3F3F3;
+            box-shadow: -20px -20px 30px #FFFFFF,
+                20px 20px 50px #D2D2D2;
+            border-radius: 15px;
+            height: 540px;
+            overflow: hidden;
+            border: 1px solid $mainBorder;
+            padding: rem(20) rem(15);
+
+            // .stock__item-title
+
+            &-title {
+                text-align: center;
+                padding-bottom: rem(20);
+                font-weight: 600;
+            }
+
+            // .stock__image
+
+            .stock__image {
+                padding-bottom: rem(20);
+                margin: 0 auto;
+
+                img {
+                    width: rem(140);
+                    transition: all 1s ease 0s;
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+
+            // .stock__descr
+
+            .stock__descr {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                flex: 1 1 auto;
+
+                // .stock__descr-wrapper
+
+                &-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1 1 auto;
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+
+                        li {
+                            line-height: 120%;
+
+                            &:not(:last-child) {
+                                padding-bottom: rem(10);
+                            }
+
+                            // &:last-child {
+                            //     color: $mainColor1;
+                            // }
+
+                            span {
+                                font-weight: 500;
+                            }
+                        }
+
+                        .stock-item__wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            flex: 1 1 auto;
+                        }
+                    }
+
+                }
+
+                &__btn {
+                    background: #F3F3F3;
+                    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.18),
+                        inset 20px 20px 30px rgba(255, 255, 255, 0.25),
+                        inset -20px -20px 30px #CDCDCD,
+                        inset 20px 20px 30px #FFFFFF;
+                    border-radius: 42.5px;
+                    padding: rem(10) rem(24);
+                    border: 1px solid #b0b0b04a;
+                    transition: color 0.5s ease 0s;
+                    font-weight: 500;
+                    max-width: rem(250);
+                    margin: 0 auto;
+                    margin-top: rem(30);
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            color: $mainColor1;
+                        }
+                    }
+                }
+            }
+
+            // .stock__items
+        }
+    }
+
+    // .stock__item1
+
+    &__item1 {}
+
+    // .stock__item2
+
+    &__item2 {}
+
+    // .stock__item3
+
+    &__item3 {}
+
+    // .stock__item4
+
+    &__item4 {}
+
+    // .stock__item5
+
+    &__item5 {}
+
+    // .stock__item6
+
+    &__item6 {}
+
+    // .stock__item7
+
+    &__item7 {}
+
+    // .stock__item8
+
+    &__item8 {}
+
+    // .stock__item9
+
+    &__item9 {}
+
+    // .stock__item10
+
+    &__item10 {}
+
+    // .stock__item11
+
+    &__item11 {}
+
+}
