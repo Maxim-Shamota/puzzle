@@ -1,10 +1,10 @@
 //========================================================================================================================================================
 
-.fixSiphon-page {
+.fixGenerator-page {
     @include adaptiveValue("padding-top", 50, 20);
     @include adaptiveValue("padding-bottom", 30, 20);
 
-    // .cabin-page__container
+    // .fixGenerator-page__container
 
     &__container {}
 }
