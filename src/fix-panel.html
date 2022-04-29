@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Ремонт панели управления"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="fixPanel-page">
+
+			<div class="fixPanel-page__container">
+				<h1 class="servCab-up__title">РЕМОНТ ПАНЕЛИ УПРАВЛЕНИЯ</h1>
+				<div class="servCab-up">
+					<div class="servCab-up__image">
+						<img src="@img/fixPanel/fixPanel1.jpg" alt="fixPanel">
+					</div>
+					<div class="servCab-up__descr">
+						<p>Панель управления душевой кабины может отвечать за различные функции установленные в душевой
+							кабине:
+							вентилятор, свет, парогенератор, радио, телефон, температуру подачи воды, переключение
+							форсунок гидромассажа и
+							многое другое</p>
+					</div>
+				</div>
+
+				<div class="servCab__advantage">
+					@@include('html/_advantage.htm')
+				</div>
+
+				<div class="servCab-tabs">
+					<div data-tabs class="servCab-tabs">
+
+						<nav data-tabs-titles class="servCab-tabs__navigation">
+							<button type="button" class="servCab-tabs__title _tab-active">Описание</button>
+							<button type="button" class="servCab-tabs__title">Стоимость</button>
+							<button type="button" class="servCab-tabs__title">Склад</button>
+						</nav>
+
+						<div data-tabs-body class="servCab-tabs__content">
+							<div class="servCab-tabs__body servCab-tabs1__body body-tabs1">
+
+								<div class="body-tabs1__up">
+									<div class="body-tabs1__up-title">
+										<h2>Ремонт панели управления в душевой кабине</h2>
+									</div>
+									<div class="body-tabs1__up-descr">
+										<p>При повреждении панели управления лучше как можно раньше обратиться в
+											сервисную службу для определения
+											причины поломки. Возможно, проблема в разгерметизации оболочки и нужно
+											скорее провести зачистку контактов
+											и герметизацию во избежании дальнейшего повреждения. Как только вы заметили
+											некорректную работу панели
+											управления в душевой кабине, сразу звоните в «Боб-мастер»!</p>
+										<p>Наши специалисты имеют многолетний опыт работы в ремонте электронных панелей
+											управления для душевых кабин.
+										</p>
+									</div>
+								</div>
+
+								<div class="body-tabs1__down">
+									<div class="body-tabs1__down-title">
+										<h2>Ремонт панели управления происходит следующим образом:</h2>
+									</div>
+									<div class="body-tabs1__down-descr">
+										<h3><span>1</span>Разборка панели в душевой кабине</h3>
+										<h3><span>2</span>Зачистка контактов</h3>
+										<h3><span>3</span>Герметизация оболочки электронной панели</h3>
+										<h3><span>3</span>Установка панели на прежнее место</h3>
+									</div>
+								</div>
+
+								<div class="body-tabs1__up">
+									<div class="body-tabs1__up-descr">
+										<p>Эти работы гарантируют дальнейшее использование душевой кабины уже сегодня. Мы осуществляем ремонт панели
+											управления душевой кабиной в кратчайшее время!</p>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="servCab-tabs__body servCab-price">
+								<div class="servCab-price__title">Стоимость ремонта панели управления в душевой кабине</div>
+								<div class="servCab-price__items">
+									<div class="servCab-price__item fixPanel-price__item1">
+										<div class="servCab-price__image">
+											<img src="img/fixPanel/fixPanel2.jpg" alt="fixPanel">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Ремонт панели управления душевой кабины</div>
+											<!-- <div class="descr-cabPrice__subtitle">до 100х100</div> -->
+											<div class="descr-cabPrice__price">от 1100 руб.</div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item fixPanel-price__item2">
+										<div class="servCab-price__image">
+											<img src="img/fixPanel/fixPanel3.jpg" alt="fixPanel">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Ремонт динамика радио в душевой кабине</div>
+											<!-- <div class="descr-cabPrice__subtitle">до 120х80</div> -->
+											<div class="descr-cabPrice__price">от 550 руб.</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="fixPanel-tabs__body fixPanel-stock">
+								@@include('html/_stock.htm')
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

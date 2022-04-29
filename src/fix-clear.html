@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Чистка душевой кабины"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="fixClear-page">
+
+			<div class="fixClear-page__container">
+				<h1 class="servCab-up__title">ЧИСТКА ДУШЕВОЙ КАБИНЫ</h1>
+				<div class="servCab-up">
+					<div class="servCab-up__image">
+						<img src="@img/fixClear/fixClear1.jpg" alt="fixClear">
+					</div>
+					<div class="servCab-up__descr">
+						<p>Чистка и дезинфекция — это то, что мы делаем постоянно в своем доме. Мы избавляемся от пыли,
+							грязи и микробов.
+							Ванная комната является одним из самых восприимчивых мест в доме, т.к. там повышенная
+							влажность, в которой
+							вредоносные бактерии быстро размножаются.</p>
+					</div>
+				</div>
+
+				<div class="servCab__advantage">
+					@@include('html/_advantage.htm')
+				</div>
+
+				<div class="servCab-tabs">
+					<div data-tabs class="servCab-tabs">
+
+						<nav data-tabs-titles class="servCab-tabs__navigation">
+							<button type="button" class="servCab-tabs__title _tab-active">Описание</button>
+							<button type="button" class="servCab-tabs__title">Стоимость</button>
+							<button type="button" class="servCab-tabs__title">Склад</button>
+						</nav>
+
+						<div data-tabs-body class="servCab-tabs__content">
+							<div class="servCab-tabs__body servCab-tabs1__body body-tabs1">
+
+								<div class="body-tabs1__up">
+									<div class="body-tabs1__up-title">
+										<h2>Чистка душевой кабины</h2>
+									</div>
+									<div class="body-tabs1__up-descr">
+										<p>Из-за некачественной воды на стенках душевой кабины оседает известковый
+											налет, мыльная пена скапливается в
+											углах, а горячая вода из-за ржавчины часто оставляет желтые пятна на белом
+											поддоне — все это в итоге
+											остается на вашей коже и способствует развитию болезней.</p>
+										<p>Чтобы избежать всего этого, мы рекомендуем периодически проводить чистку
+											душевой кабины с дезинфекцией. Это
+											избавит Вас от плесени, грибка в душевой кабине, а также позволит дольше ею
+											пользоваться. Чистая душевая
+											кабина — залог Вашего здоровья! Звоните специалистам Боб-Мастер!</p>
+										<p>Гарантируем безопасное использование душевой кабины уже сегодня. Мы
+											осуществляем чистку и дезинфекцию
+											душевой кабины в кратчайшее время!</p>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="servCab-tabs__body servCab-price">
+								<div class="servCab-price__title">Стоимость чистки и дезинфекции душевой кабины</div>
+								<div class="servCab-price__items">
+									<div class="servCab-price__item fixClear-price__item1">
+										<div class="servCab-price__image">
+											<img src="img/fixClear/fixClear2.jpg" alt="fixClear">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Дезинфекция душевой кабины/защита от грибка и плесени</div>
+											<!-- <div class="descr-cabPrice__subtitle">до 100х100</div> -->
+											<div class="descr-cabPrice__price">от 1800 руб.</div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item fixClear-price__item2">
+										<div class="servCab-price__image">
+											<img src="img/fixClear/fixClear3.jpg" alt="fixClear">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Нанесение защитного покрытия на стекла душевой кабины (облегчает уход,
+												вода не оставляет разводы)</div>
+											<!-- <div class="descr-cabPrice__subtitle">до 120х80</div> -->
+											<div class="descr-cabPrice__price">от 1800 руб.</div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item fixClear-price__item3">
+										<div class="servCab-price__image">
+											<img src="img/fixClear/fixClear4.jpeg" alt="fixClear">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Герметизация душевой кабины, м/п</div>
+											<!-- <div class="descr-cabPrice__subtitle">до 170х80</div> -->
+											<div class="descr-cabPrice__price">от 250 руб.</div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item fixClear-price__item4">
+										<div class="servCab-price__image">
+											<img src="img/fixClear/fixClear5.jpeg" alt="fixClear">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Зачистка швов и стекол душевой кабины от налета и плесени</div>
+											<!-- <div class="descr-cabPrice__subtitle">от 90х90</div> -->
+											<div class="descr-cabPrice__price">от 1100 руб.</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="fixClear-tabs__body fixClear-stock">
+								@@include('html/_stock.htm')
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

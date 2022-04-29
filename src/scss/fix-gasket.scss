@@ -1,0 +1,10 @@
+//========================================================================================================================================================
+
+.fixGasket-page {
+    @include adaptiveValue("padding-top", 50, 20);
+    @include adaptiveValue("padding-bottom", 30, 20);
+
+    // .fixGasket-page__container
+
+    &__container {}
+}
