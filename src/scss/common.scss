@@ -1,5 +1,9 @@
 // Заголовки, общие БЄМ блоки и проче...
 
+main {
+    margin-top: 246px;
+}
+
 .servCab-up {
     display: flex;
     @include adaptiveValue("gap", 30, 20);

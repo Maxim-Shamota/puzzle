@@ -1,4 +1,94 @@
 //====================================================================================================
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	min-height: 46px;
+
+	@media (max-width:$mobile) {
+		min-height: 5px;
+	}
+
+	&._scroll {
+		.header__wrapper {
+			background-color: rgba(255, 255, 255, 0.8);
+
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: rgba(255, 255, 255, 0.9);
+				}
+			}
+		}
+
+		.header-menu-up {
+			min-height: 44px;
+		}
+
+		.header-menu__up-button {
+			a {
+				font-size: rem(26);
+			}
+		}
+
+		.header-menu__middle {
+			padding: 6px 0;
+		}
+
+		.header-menu__middle__container {
+			min-height: 50px;
+		}
+
+		.header-menu__middle-logo {
+			padding: rem(0) rem(20);
+
+			img {
+				@include adaptiveValue("height", 60, 50);
+			}
+		}
+
+		.middle-menu-buttons__text {
+			display: none;
+
+			@media (max-width:$mobileSmall) {
+				display: block;
+				padding-top: rem(5);
+			}
+		}
+
+		.middle-menu-buttons__call-back {
+			margin-top: rem(7);
+		}
+
+		.middle-menu-buttons__call-back_text {
+			display: none;
+
+			@media (max-width:$tablet) {
+				display: block;
+				padding-top: rem(5);
+			}
+		}
+
+		.header-menu__down {
+			padding-top: rem(10);
+			padding-bottom: rem(5);
+
+			@media (max-width:$tablet) {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+		}
+	}
+
+	&__wrapper {
+		transition: background-color 0.5s ease 0s;
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: 0;
+		z-index: 50;
+	}
+}
 
 .header-menu {
 
@@ -23,32 +113,43 @@
 
 	&__up-button {
 		z-index: 5;
+		display: flex;
+		padding: rem(10) 0px;
 
-		&::before {
-			@extend %ic;
-			@extend ._icon-sun;
-			font-size: rem(22);
-			padding: 10px;
-			background-color: #2D2D2D;
-			transition: all 0.8s ease 0s;
-			border-radius: 50%;
-		}
+		.whatsapp {
+			margin-left: rem(15);
+			@include adaptiveValue("font-size", 32, 26);
+			color: #43d854;
+			transition: all 0.5s ease 0s;
 
-		@media (any-hover: hover) {
-			&:hover {
-				color: #fff;
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+				}
 			}
 		}
 
-		@media (max-width:$tablet) {
-			margin-left: rem(5);
+		.telegram {
+			margin-left: rem(15);
+			@include adaptiveValue("font-size", 32, 26);
+			color: #26A2DB;
+			transition: all 0.5s ease 0s;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: #fff;
+				}
+			}
 		}
+
+		margin-right: rem(10);
 	}
 
 	// .header-menu__middle
 
 	&__middle {
 		padding: 10px 0;
+		transition: all 0.3s ease 0s;
 
 		&__container {
 			display: flex;
@@ -63,6 +164,7 @@
 	&__middle-logo {
 		img {
 			@include adaptiveValue("height", 100, 50);
+			transition: all 0.5s ease 0s;
 		}
 
 		margin-right: rem(10);
@@ -85,9 +187,11 @@
 	&__down {
 		background-color: #2D2D2D;
 		padding-top: rem(20);
+		padding-bottom: rem(10);
 
 		@media (max-width:$tablet) {
 			padding-top: 0;
+			padding-bottom: 0;
 		}
 
 		&__container {}
@@ -174,8 +278,11 @@
 			position: relative;
 			display: flex;
 
+
+
 			a {
 				padding-right: rem(10);
+				@include adaptiveValue("padding-right", 10, 5);
 				font-weight: 600;
 				line-height: 150%;
 				transition: color 0.8s ease 0s;
@@ -193,6 +300,10 @@
 							color: #fff;
 						}
 					}
+				}
+
+				@media (max-width: 330px) {
+					margin-left: rem(-10);
 				}
 			}
 
@@ -222,7 +333,7 @@
 	// .middle-menu-buttons__arrow
 
 	&__arrow {
-		font-size: rem(16);
+		font-size: rem(14);
 		transition: all 0.5s ease 0s;
 
 		@media (any-hover: hover) {
@@ -251,6 +362,7 @@
 		text-align: center;
 		@include adaptiveValue("font-size", 12, 10);
 		padding-top: rem(10);
+		transition: all 0.3s ease 0s;
 	}
 
 	// .middle-menu-buttons__call-back
@@ -259,6 +371,7 @@
 		display: flex;
 		flex-direction: column;
 		margin-top: rem(10);
+		transition: all 0.3s ease 0s;
 
 		// .middle-menu-buttons__call-back_link
 
@@ -269,17 +382,20 @@
 			text-align: center;
 			@include adaptiveValue("font-size", 16, 12);
 			background: #F3F3F3;
-			box-shadow: -10px -10px 20px #FFFFFF,
+			box-shadow: -10px -10px 16px #FFFFFF,
 				10px 10px 20px rgba(0, 0, 0, 0.09);
 			border-radius: 15px;
 			border: 1px solid $mainBorder;
-
 			transition: color 0.8s ease 0s;
 
 			@media (any-hover: hover) {
 				&:hover {
 					color: $mainColor1;
 				}
+			}
+
+			@media (max-width:$mobileSmall) {
+				padding: 8px 13px;
 			}
 		}
 
@@ -290,6 +406,7 @@
 			text-align: center;
 			padding-top: rem(10);
 			@include adaptiveValue("font-size", 12, 10);
+			transition: all 0.3s ease 0s;
 		}
 	}
 }
@@ -346,7 +463,6 @@
 			color: $mainColor1;
 			display: flex;
 			justify-content: space-between;
-			padding-bottom: rem(10);
 			padding-top: 0;
 		}
 	}
