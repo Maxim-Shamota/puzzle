@@ -534,7 +534,7 @@
 					pointer-events: none;
 					transition: all 0.3s ease 0s;
 					transform: translate(0px, rem(10));
-					min-width: rem(200);
+					min-width: rem(300);
 					position: absolute;
 					left: 0;
 					top: 100%;
@@ -547,7 +547,7 @@
 
 			&-item {
 				&:not(:last-child) {
-					margin-bottom: rem(10);
+					margin-bottom: rem(7);
 				}
 			}
 
@@ -600,7 +600,15 @@
 
 		// .popup__close
 
-		&__close {}
+		&__close {
+			transition: all 0.5s ease 0s;
+
+			@media (any-hover: hover){
+				&:hover{
+					color: $mainColor1;
+				}
+			}
+		}
 
 		// .popup__context
 
