@@ -1,10 +1,10 @@
 //========================================================================================================================================================
 
-.techOffice-page {
+.techShop-page {
     @include adaptiveValue("padding-top", 50, 20);
     @include adaptiveValue("padding-bottom", 30, 20);
 
-    // .techOffice__container
+    // .techShop__container
 
     &__container {}
 
@@ -12,9 +12,9 @@
         margin-bottom: rem(20);
     }
 
-    .techOffice {
+    .techShop {
 
-        // .techOffice__economy
+        // .techShop__economy
 
         &__economy {
             border-radius: 15px;
@@ -30,7 +30,7 @@
             @include adaptiveValue("font-size", 18, 14);
         }
 
-        // .techOffice__economy-item
+        // .techShop__economy-item
 
         &__economy-item {
             display: flex;
@@ -48,14 +48,14 @@
             }
         }
 
-        // .techOffice__economy-col1
+        // .techShop__economy-col1
 
         &__economy-col1 {
             flex: 1 1 auto;
             @include adaptiveValue("max-width", 650, 120);
         }
 
-        // .techOffice__economy-col2
+        // .techShop__economy-col2
 
         &__economy-col2 {
             color: rgb(198, 19, 19);
@@ -63,7 +63,7 @@
             text-align: end;
         }
 
-        // .techOffice__economy-col3
+        // .techShop__economy-col3
 
         &__economy-col3 {
             color: green;
@@ -72,7 +72,7 @@
         }
     }
 
-    .techOffice-claim {}
+    .techShop-claim {}
 
     .cabin-calc {
 
