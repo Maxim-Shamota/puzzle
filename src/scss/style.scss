@@ -139,6 +139,7 @@ body {
 // Подключение стилей отдельных страниц
 @import "advantage";
 @import "stock";
+@import "stockFurniture";
 @import "main-cabs";
 @import "install-cab";
 @import "install-corner";
@@ -159,3 +160,6 @@ body {
 @import "fix-gasket";
 @import "tech-office";
 @import "tech-shop";
+@import "master-kitchen";
+@import "master-furniture";
+@import "master-fix-furniture";

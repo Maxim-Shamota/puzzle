@@ -1,0 +1,56 @@
+//========================================================================================================================================================
+
+.masterFurniture-page {
+    @include adaptiveValue("padding-top", 50, 20);
+    @include adaptiveValue("padding-bottom", 30, 20);
+
+    // .masterFurniture__container
+
+    &__container {}
+
+    .servCab-tabs {
+        margin-bottom: rem(20);
+    }
+
+    .servCab-price {
+
+        // .servCab-price__item
+
+        &__item {
+            @include adaptiveValue("width", 400, 300);
+            height: 630px;
+        }
+
+    }
+
+    .descr-cabPrice {
+
+        // .descr-cabPrice__title
+
+        &__title {
+            flex: none;
+        }
+
+        &__list {
+            padding-top: rem(20);
+            flex: 1 1 auto;
+        }
+
+        // .descr-cabPrice__descr
+
+        &__descr {
+            line-height: 110%;
+        }
+
+        // .descr-cabPrice__price
+
+        &__price {
+            text-align: end;
+            font-weight: 500;
+        }
+    }
+
+}
+
+//========================================================================================================================================================
+

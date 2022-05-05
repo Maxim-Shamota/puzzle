@@ -1,0 +1,133 @@
+//========================================================================================================================================================
+
+.masterKitchen-page {
+    @include adaptiveValue("padding-top", 50, 20);
+    @include adaptiveValue("padding-bottom", 30, 20);
+
+    // .masterKitchen__container
+
+    &__container {}
+
+    .servCab-tabs {
+        margin-bottom: rem(20);
+    }
+
+    .servCab-price {
+
+        // .servCab-price__item
+
+        &__item {
+            @include adaptiveValue("width", 400, 300);
+            height: 630px;
+        }
+
+    }
+
+    .descr-cabPrice {
+
+        // .descr-cabPrice__title
+
+        &__title {
+            flex: none;
+        }
+
+        &__list {
+            padding-top: rem(20);
+            flex: 1 1 auto;
+        }
+
+        // .descr-cabPrice__descr
+
+        &__descr {
+            line-height: 110%;
+        }
+
+        // .descr-cabPrice__price
+
+        &__price {
+            text-align: end;
+            font-weight: 500;
+        }
+    }
+
+
+    .cabin-calc {
+
+        &__items {
+
+            .cabin-calc__item {
+
+                .item-calc__text {}
+
+                .item-calc__input {
+                    @include adaptiveValue("font-size", 16, 14);
+                    margin-top: rem(10);
+                    max-width: rem(220);
+                    background: #F9F9F9;
+                    border-radius: 42.5px;
+                    box-shadow: inset -10px -10px 20px #FFFFFF,
+                        inset 10px 10px 20px rgba(0, 0, 0, 0.08);
+                    color: #B0B0B0;
+                    padding: rem(10) rem(24);
+                    border: 1px solid $mainBorder;
+                    outline: none;
+                }
+
+                .item-calc__sel {
+                    .form {
+                        max-width: rem(220);
+                    }
+                }
+            }
+        }
+
+        &__checkbox {
+            .item-calc {
+
+                // .item-calc__title
+
+                &__title {
+                    margin-top: rem(15);
+                    margin-bottom: rem(15);
+                    font-weight: 600;
+                }
+
+                // .item-calc__checkbox
+
+                &__checkbox {
+                    display: grid;
+                    align-items: center;
+                    @include adaptiveValue("padding-left", 70, 0);
+                    @include adaptiveValue("padding-right", 70, 0);
+                    margin-bottom: rem(10);
+                }
+            }
+
+            .checkbox {
+
+                // .checkbox__label
+
+                &__label {
+                    flex-direction: row-reverse;
+                    justify-content: space-between;
+                    transition: color 0.5s ease 0s;
+                        text-align: left;
+
+                    @media (any-hover: hover){
+                        &:hover{
+                            color: $mainColor1;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &__btn {
+            margin-bottom: rem(20);
+        }
+    }
+}
+
+//========================================================================================================================================================
+

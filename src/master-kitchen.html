@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Сборка кухни"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="masterKitchen-page">
+
+			<div class="masterKitchen-page__container">
+				<h1 class="servCab-up__title">СБОРКА КУХНИ</h1>
+				<div class="servCab-up">
+					<div class="servCab-up__image">
+						<img src="@img/masterKitchen/masterKitchen1.jpg" alt="masterKitchen">
+					</div>
+					<div class="servCab-up__descr">
+						<p>Сборка кухни — приятное и волнующее событие. Чтобы кухня служила вам долгие годы, наши мастера-сборщики
+							регулярно оттачивают свое мастерство для увеличения скорости работ на учебных образцах кухонь самых разных
+							производителей.</p>
+					</div>
+				</div>
+
+				<div class="servCab__advantage">
+					@@include('html/_advantage.htm')
+				</div>
+
+				<div class="servCab-tabs">
+					<div data-tabs class="servCab-tabs">
+
+						<nav data-tabs-titles class="servCab-tabs__navigation">
+							<button type="button" class="servCab-tabs__title _tab-active">Описание</button>
+							<button type="button" class="servCab-tabs__title">Стоимость</button>
+							<!-- <button type="button" class="servCab-tabs__title">Прайс</button> -->
+							<button type="button" class="servCab-tabs__title">Калькулятор</button>
+						</nav>
+
+						<div data-tabs-body class="servCab-tabs__content">
+							<div class="servCab-tabs__body servCab-tabs1__body body-tabs1">
+
+								<div class="body-tabs1__up">
+									<div class="body-tabs1__up-title">
+										<h2>Как правильно подготовиться к установке новой кухни?</h2>
+									</div>
+									<div class="body-tabs1__up-descr">
+										<p>Чтобы подготовить пространство для быстрой сборки, нужно выполнить несколько несложных вещей:</p>
+									</div>
+								</div>
+
+								<div class="body-tabs1__down">
+									<div class="body-tabs1__down-descr">
+										<h3><span>1</span>По возможности, демонтируйте старую кухню</h3>
+										<h3><span>2</span>Максимально освободите помещение, приготовленное для установки кухни</h3>
+										<h3><span>3</span>По возможности, снимите шторы, жалюзи, портьеры</h3>
+										<h3><span>4</span>Уберите цветы</h3>
+										<h3><span>5</span>Накройте предметы, не подлежащие выносу</h3>
+									</div>
+								</div>
+
+								<div class="body-tabs1__up">
+									<div class="body-tabs1__up-descr">
+										<p>Это существенно снизит время на уборку помещения после установки кухни и ускорит выполнение работ.
+											Разумеется, если у вас нет возможности подготовить кухню самостоятельно, наши сотрудники с радостью вам
+											помогут!</p>
+									</div>
+								</div>
+
+								<div class="techShop-claim">
+									<div class="cabin-calc__form">
+										<div class="cabin-calc__form-title">Оставьте заявку на сборку кухни</div>
+										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+											placeholder="Ваше имя" class="cabin-calc__form-input input">
+										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+											placeholder="Ваш телефон" class="cabin-calc__form-input input">
+										<button type="submit" class="cabin-calc__form-btn">Отправить</button>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="servCab-tabs__body servCab-price">
+								<div class="servCab-price__title">Стоимость сборки кухни и подключения бытовой техники</div>
+								<div class="servCab-price__items">
+									<div class="servCab-price__item servCab-price__item1">
+										<div class="servCab-price__image">
+											<img src="img/masterKitchen/masterKitchen2.jpeg" alt="masterKitchen">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Кухня 2,3 метра</div>
+											<div class="descr-cabPrice__list">
+												<div class="descr-cabPrice__descr">1. Сборка кухонных модулей</div>
+												<div class="descr-cabPrice__descr">2. Установка и стяжка кухонных модулей</div>
+												<div class="descr-cabPrice__descr">3. Установка столешницы и стеновой панели</div>
+												<div class="descr-cabPrice__descr">4. Установка и подключение раковины</div>
+											</div>
+											<div class="descr-cabPrice__price">5800 руб.</div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item servCab-price__item2">
+										<div class="servCab-price__image">
+											<img src="img/masterKitchen/masterKitchen3.jpeg" alt="masterKitchen">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Кухня 3 метра</div>
+											<div class="descr-cabPrice__list">
+												<div class="descr-cabPrice__descr">1. Сборка кухонных модулей</div>
+												<div class="descr-cabPrice__descr">2. Установка и стяжка кухонных модулей</div>
+												<div class="descr-cabPrice__descr">3. Установка столешницы</div>
+												<div class="descr-cabPrice__descr">4. Технологические вырезы и пропилы под раковину, варочную панель</div>
+												<div class="descr-cabPrice__descr">5. Установка и подключение раковины, варочной панели и вытяжки</div>
+											</div>
+											<div class="descr-cabPrice__price">7200 руб.</div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item servCab-price__item3">
+										<div class="servCab-price__image">
+											<img src="img/masterKitchen/masterKitchen4.jpg" alt="masterKitchen">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Кухня 5,5 метров</div>
+											<div class="descr-cabPrice__list">
+												<div class="descr-cabPrice__descr">1. Сборка кухонных модулей</div>
+												<div class="descr-cabPrice__descr">2. Установка и стяжка кухонных модулей</div>
+												<div class="descr-cabPrice__descr">3. Установка столешницы с технологическими вырезами под раковину и
+													варочной панели</div>
+												<div class="descr-cabPrice__descr">4. Установка и подключение бытовой техники</div>
+												<div class="descr-cabPrice__descr">5. Установка менсол, верхнего плинтуса, «короны» с запилами под размер
+												</div>
+											</div>
+											<div class="descr-cabPrice__price">11200 руб.</div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item servCab-price__item4">
+										<div class="servCab-price__image">
+											<img src="img/masterKitchen/masterKitchen5.jpg" alt="masterKitchen">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Кухня 6,5 метров с островом</div>
+											<div class="descr-cabPrice__list">
+												<div class="descr-cabPrice__descr">1. Сборка кухонных модулей</div>
+												<div class="descr-cabPrice__descr">2. Установка и стяжка кухонных модулей</div>
+												<div class="descr-cabPrice__descr">3. Установка столешницы с вырезами под бытовые приборы</div>
+												<div class="descr-cabPrice__descr">4. Сборка «острова» с подключением раковины</div>
+												<div class="descr-cabPrice__descr">5. Подключение бытовой техники</div>
+											</div>
+											<div class="descr-cabPrice__price">13900 руб.</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="techShop-claim">
+									<div class="cabin-calc__form">
+										<div class="cabin-calc__form-title">Оставьте заявку на сборку кухни</div>
+										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваше имя"
+											class="cabin-calc__form-input input">
+										<input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Ваш телефон"
+											class="cabin-calc__form-input input">
+										<button type="submit" class="cabin-calc__form-btn">Отправить</button>
+									</div>
+								</div>
+							</div>
+
+							<!-- <div class="servCab-tabs__body servCab-tabs2__body body-tabs3"></div> -->
+
+							<div class="masterKitchen__body masterKitchen-calc">
+								<div class="cabin-calc__title">Предварительный расчет стоимости сборки кухни</div>
+								<div class="cabin-calc__subtitle">
+									<p>С помощью онлайн-калькулятора вы можете оценить примерную стоимость сборки кухни</p>
+									<p>Расчет сборки действует при условии стоимости Вашей кухни до 200 000 руб. по чеку, включая технику.</p>
+									<p>Если затрудняетесь с ответом на какой-то вопрос — ничего страшного! Просто
+										отправьте свои расчёты менеджеру,
+										он свяжется с вами и обязательно поможет</p>
+								</div>
+								<div class="cabin-calc__items">
+
+									<div class="cabin-calc__item cabin-calc__item-1">
+										<div class="item-calc__text">Длина кухни в погонных метрах</div>
+										<input autocomplete="off" type="number" name="form[]" data-error="Ошибка"
+											placeholder="п.м" class="item-calc__input">
+									</div>
+
+									<div class="cabin-calc__checkbox cabin-calc__item-2">
+										<div class="item-calc__title">Установка мойки</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_1" class="checkbox__label">Установка мойки</label>
+										</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_2" class="checkbox__label">Вырез под мойку в столешнице (c герметизацией)</label>
+										</div>
+									</div>
+
+									<div class="cabin-calc__checkbox cabin-calc__item-3">
+										<div class="item-calc__title">Установка бытовой техники</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox"
+												value="1" name="form[]">
+											<label for="c_3" class="checkbox__label">Установка вытяжки</label>
+										</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox"
+												value="1" name="form[]">
+											<label for="c_4" class="checkbox__label">Установка духового шкафа</label>
+										</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox"
+												value="1" name="form[]">
+											<label for="c_5" class="checkbox__label">Установка встраиваемой посудомоечной машины</label>
+										</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox"
+												value="1" name="form[]">
+											<label for="c_6" class="checkbox__label">Установка встраиваемого холодильника</label>
+										</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox"
+												value="1" name="form[]">
+											<label for="c_7" class="checkbox__label">Установка встраиваемой стиральной машины</label>
+										</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox"
+												value="1" name="form[]">
+											<label for="c_8" class="checkbox__label">Установка кофемашины</label>
+										</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_9" data-error="Ошибка" class="checkbox__input" type="checkbox"
+												value="1" name="form[]">
+											<label for="c_9" class="checkbox__label">Установка варочной панели</label>
+										</div>
+									</div>
+
+									<div class="cabin-calc__checkbox cabin-calc__item-4">
+										<div class="item-calc__title">Прочие работы</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_10" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_10" class="checkbox__label">Отверстие в мебели под вентиляционную трубу</label>
+										</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_11" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_11" class="checkbox__label">Установка и подключение трансформатора</label>
+										</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_12" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_12" class="checkbox__label">Изготовление косого торца столешницы с ламинированием</label>
+										</div>
+										<div class="item-calc__checkbox checkbox">
+											<input id="c_13" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_13" class="checkbox__label">Установка фильтра питьевой воды (Аквафор и др.)</label>
+										</div>
+									</div>
+
+									<button type="submit" class="cabin-calc__btn button">Рассчитать</button>
+
+									<div class="cabin-calc__item cabin-calc__item-5">
+										<div class="item-calc__text">Сборка вашей кухни будет стоить</div>
+										<input autocomplete="off" type="number" name="form[]" data-error="Ошибка"
+											placeholder="Итого" class="item-calc__input">
+									</div>
+
+								</div>
+
+								<div class="cabin-calc__form">
+									<div class="cabin-calc__form-title">Отправить расчет менеджеру</div>
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+										placeholder="Ваше имя" class="cabin-calc__form-input input">
+									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+										placeholder="Ваш телефон" class="cabin-calc__form-input input">
+									<button type="submit" class="cabin-calc__form-btn">Отправить</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
