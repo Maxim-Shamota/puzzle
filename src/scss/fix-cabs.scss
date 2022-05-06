@@ -1,0 +1,10 @@
+//========================================================================================================================================================
+
+.fixCabs-page {
+    @include adaptiveValue("padding-top", 50, 20);
+    @include adaptiveValue("padding-bottom", 30, 20);
+
+    // .fixCabs-page__container
+
+    &__container {}
+}

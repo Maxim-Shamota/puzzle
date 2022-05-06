@@ -33,3 +33,24 @@ window.onload = function () {
     const headerObserver = new IntersectionObserver(callback);
     headerObserver.observe(headerElement);
 }
+
+// для отправки формы в телеграм
+
+jQuery(document).ready(function () {
+    jQuery("form").submit(function () { // Событие отправки с формы
+        var form_data = jQuery(this).serialize(); // Собираем данные из полей
+        jQuery.ajax({
+            type: "POST", // Метод отправки
+            url: "sendform.php", // Путь к PHP обработчику sendform.php
+            data: form_data,
+            success: swal({
+                title: "Ваши данные отправлены. Мы перезвоним Вам в течении 60 секунд!",
+                type: "success",
+                showConfirmButton: false,
+                timer: 2000
+            })
+        });
+        // $(this).find('input, textarea').prop('reset', true);
+        event.preventDefault();
+    });
+});
