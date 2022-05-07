@@ -32,6 +32,62 @@ window.onload = function () {
 
     const headerObserver = new IntersectionObserver(callback);
     headerObserver.observe(headerElement);
+    
+    // калькулятор установки душевой кабины
+    try {
+        const calcCab = (cabSize, cabPallet, cabGenerator, mkadCab, resultCab) => {
+            const sizeCab = document.querySelector(cabSize),
+                palletCab = document.querySelector(cabPallet),
+                generatorCab = document.querySelector(cabGenerator),
+                cabMkad = document.querySelector(mkadCab),
+                cabResult = document.querySelector(resultCab);
+
+            let sum = 0;
+            const cabFunc = () => {
+                sum = Math.round((+sizeCab.value) + (+palletCab.value) + (+generatorCab.value));
+                if (cabMkad.value > 0) {
+                    sum = sum + 300 + (+cabMkad.value * 30);
+                }
+                cabResult.textContent = sum;
+            };
+
+            sizeCab.addEventListener('change', cabFunc);
+            palletCab.addEventListener('change', cabFunc);
+            generatorCab.addEventListener('change', cabFunc);
+            cabMkad.addEventListener('input', cabFunc);
+        }
+        calcCab('#cabSize', '#cabPallet', '#cabGenerator', '#mkadCab', '#resultCab');
+    } catch (e) {
+        
+    }
+
+    // калькулятор ремонта поддона
+    try {
+        const calcPallet = (palletSize, palletCab, palletRift, palletMkad, palletResult) => {
+            const sizePallet = document.querySelector(palletSize),
+                cabPallet = document.querySelector(palletCab),
+                riftPallet = document.querySelector(palletRift),
+                mkadPallet = document.querySelector(palletMkad),
+                resultPallet = document.querySelector(palletResult);
+
+            let sum = 0;
+            const palletFunc = () => {
+                sum = Math.round((+sizePallet.value) + (+cabPallet.value) + (+riftPallet.value));
+                if (mkadPallet.value > 0) {
+                    sum = sum + 300 + (+mkadPallet.value * 30);
+                }
+                resultPallet.textContent = sum;
+            };
+
+            sizePallet.addEventListener('change', palletFunc);
+            cabPallet.addEventListener('change', palletFunc);
+            riftPallet.addEventListener('change', palletFunc);
+            mkadPallet.addEventListener('input', palletFunc);
+        }
+        calcPallet('#palletSize', '#palletCab', '#palletRift', '#palletMkad', '#palletResult');
+    } catch (e) {
+        
+    }
 }
 
 // для отправки формы в телеграм
@@ -54,3 +110,5 @@ jQuery(document).ready(function () {
         event.preventDefault();
     });
 });
+
+

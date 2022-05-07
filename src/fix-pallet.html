@@ -153,47 +153,47 @@
 									<div class="fixPallet-calc__item">
 										<div class="item-calc__text">Размер душевой кабины</div>
 										<div class="item-calc__sel">
-											<select name="form[]" class="form">
-												<option value="1" selected>до 100 см</option>
-												<option value="2">до 120 см</option>
-												<option value="3">до 150 см</option>
-												<option value="3">до 170 см</option>
+											<select name="pallet-size" class="form" id=palletSize>
+												<option value="0" selected>выбрать</option>
+												<option value="2700">до 100 см</option>
+												<option value="3700">до 120 см</option>
+												<option value="4700">до 150 см</option>
+												<option value="5700">до 170 см</option>
 											</select>
 										</div>
 									</div>
 									<div class="fixPallet-calc__item">
 										<div class="item-calc__text">Глубина поддона</div>
 										<div class="item-calc__sel">
-											<select name="form[]" class="form">
-												<option value="1" selected>более 20 см</option>
-												<option value="2">менее 20 см</option>
+											<select name="pallet-cab" class="form" id=palletCab>
+												<option value="0" selected>выбрать</option>
+												<option value="600">более 20 см</option>
+												<option value="500">менее 20 см</option>
 											</select>
 										</div>
 									</div>
 									<div class="fixPallet-calc__item">
 										<div class="item-calc__text">Размер трещины с учетом материалов для производства работ</div>
 										<div class="item-calc__sel">
-											<select name="form[]" class="form">
-												<option value="1" selected>до 3 см</option>
-												<option value="2">до 7 см</option>
-												<option value="2">до 12 см</option>
+											<select name="pallet-rift" class="form" id=palletRift>
+												<option value="0" selected>выбрать</option>
+												<option value="3700">до 3 см</option>
+												<option value="3900">до 7 см</option>
+												<option value="4200">до 12 см</option>
 											</select>
 										</div>
 									</div>
 									<div class="fixPallet-calc__item">
-										<div class="item-calc__text">Потребуется ли выезд мастера за пределы МКАД?</div>
-										<div class="item-calc__sel">
-											<select name="form[]" class="form">
-												<option value="1" selected>Нет</option>
-												<option value="2">Да</option>
-											</select>
-										</div>
+										<div class="item-calc__text">Потребуется ли выезд мастера за пределы МКАД? Если
+											да, то укажите удаленность от МКАД в км</div>
+										<input autocomplete="off" type="number" name="pallet-mkad" data-error="Ошибка" placeholder="км от МКАД"
+											class="item-calc__input" id=palletMkad name="pallet-mkad">
 									</div>
-									<div class="fixPallet-calc__descr">
-										<p>Форма отправки предварительного расчёта мастеру будет доступна сразу после
-											нажатия кнопки «Рассчитать»</p>
+
+									<div class="fixPallet-calc__item fixPallet-calc__item-6">
+										<div class="item-calc__text">Стоимость установки и подключения душевой кабины равна </div>
+										<div class="item-calc__input" id=palletResult name="pallet-result"></div>
 									</div>
-									<button type="submit" class="fixPallet-calc__btn button">Рассчитать</button>
 								</div>
 
 								<div class="fixPallet-calc__form">

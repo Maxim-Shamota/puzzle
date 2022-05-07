@@ -178,7 +178,8 @@
 										<div data-spollers class="spollers servCab-spoll6">
 											<div class="servCab-spoll6__item">
 												<button type="button" data-spoller
-													class="servCab-spoll6__title _icon-arrow-down">Установка крыши душевой
+													class="servCab-spoll6__title _icon-arrow-down">Установка крыши
+													душевой
 													кабины <span>6</span></button>
 												<div class="servCab-spoll6__body">
 													<p>Удаляем защитную пленку с крыши душевой кабины. Для этого может
@@ -206,7 +207,8 @@
 										<div data-spollers class="spollers servCab-spoll9">
 											<div class="servCab-spoll9__item">
 												<button type="button" data-spoller
-													class="servCab-spoll9__title _icon-arrow-down">Установка и регулировка
+													class="servCab-spoll9__title _icon-arrow-down">Установка и
+													регулировка
 													дверей душевой кабины <span>9</span></button>
 												<div class="servCab-spoll9__body">
 													<div class="servCab-spol9__image"><img src="@img/cabin/cabin4.jpg"
@@ -380,48 +382,52 @@
 										свяжется с вами и обязательно поможет</p>
 								</div>
 								<div class="cabin-calc__items">
+
 									<div class="cabin-calc__item">
 										<div class="item-calc__text">Параметры душевой кабины</div>
 										<div class="item-calc__sel">
-											<select name="form[]" class="form">
-												<option value="1" selected>до 100х100 см</option>
-												<option value="2">до 120х80 см</option>
-												<option value="3">до 170х80 см</option>
+											<select name="cab-size" class="form" id=cabSize>
+												<option value="0" selected>выбрать</option>
+												<option value="3900">до 100х100 см</option>
+												<option value="4800">до 120х80 см</option>
+												<option value="5700">до 170х80 см</option>
 											</select>
 										</div>
 									</div>
+
 									<div class="cabin-calc__item">
 										<div class="item-calc__text">Высота поддона</div>
 										<div class="item-calc__sel">
-											<select name="form[]" class="form">
-												<option value="1" selected>более 20 см</option>
-												<option value="2">менее 20 см</option>
+											<select name="cab-pallet" class="form" id=cabPallet>
+												<option value="0" selected>выбрать</option>
+												<option value="500">более 20 см</option>
+												<option value="600">менее 20 см</option>
 											</select>
 										</div>
 									</div>
+
 									<div class="cabin-calc__item">
 										<div class="item-calc__text">Наличие парогенератора</div>
 										<div class="item-calc__sel">
-											<select name="form[]" class="form">
-												<option value="1" selected>Нет</option>
-												<option value="2">Есть</option>
+											<select name="cab-generator" class="form" id=cabGenerator>
+												<option value="0" selected>Нет</option>
+												<option value="500">Есть</option>
 											</select>
 										</div>
 									</div>
+
 									<div class="cabin-calc__item">
-										<div class="item-calc__text">Потребуется ли выезд мастера за пределы МКАД?</div>
-										<div class="item-calc__sel">
-											<select name="form[]" class="form">
-												<option value="1" selected>Нет</option>
-												<option value="2">Да</option>
-											</select>
-										</div>
+										<div class="item-calc__text">Потребуется ли выезд мастера за пределы МКАД? Если
+											да, то укажите удаленность от МКАД в км</div>
+										<input autocomplete="off" type="number" name="cab-mkad" data-error="Ошибка"
+											placeholder="км от МКАД" class="item-calc__input" id=mkadCab name="mkadCab">
 									</div>
-									<div class="cabin-calc__descr">
-										<p>Форма отправки предварительного расчёта мастеру будет доступна сразу после
-											нажатия кнопки «Рассчитать»</p>
+
+									<div class="cabin-calc__item cabin-calc__item-6">
+										<div class="item-calc__text">Стоимость установки и подключения душевой кабины
+											равна </div>
+										<div class="item-calc__input" id=resultCab name="resultCab"></div>
 									</div>
-									<button type="submit" class="cabin-calc__btn button">Рассчитать</button>
 								</div>
 
 								<form class="cabin-calc__form">

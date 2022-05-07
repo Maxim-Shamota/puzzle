@@ -79,6 +79,24 @@
             outline: none;
         }
 
+        .item-calc__text {
+            text-align: left;
+        }
+
+        .item-calc__input {
+            @include adaptiveValue("font-size", 16, 14);
+            margin-top: rem(10);
+            max-width: rem(220);
+            background: #F9F9F9;
+            border-radius: 42.5px;
+            box-shadow: inset -10px -10px 20px #FFFFFF,
+                inset 10px 10px 20px rgba(0, 0, 0, 0.08);
+            color: #B0B0B0;
+            padding: rem(10) rem(24);
+            border: 1px solid $mainBorder;
+            outline: none;
+        }
+
         &:not(:last-child) {
             padding-bottom: rem(15);
         }
@@ -87,6 +105,13 @@
              flex-direction: column; 
              padding-top: rem(10);
         }
+    }
+
+    #palletResult {
+        min-width: rem(150);
+        min-height: rem(40);
+        color: $mainColor1;
+        font-weight: 600;
     }
 
     // .fixPallet-calc__descr
