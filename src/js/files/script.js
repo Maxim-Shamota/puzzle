@@ -32,7 +32,7 @@ window.onload = function () {
 
     const headerObserver = new IntersectionObserver(callback);
     headerObserver.observe(headerElement);
-    
+
     // калькулятор установки душевой кабины
     try {
         const calcCab = (cabSize, cabPallet, cabGenerator, mkadCab, resultCab) => {
@@ -57,9 +57,7 @@ window.onload = function () {
             cabMkad.addEventListener('input', cabFunc);
         }
         calcCab('#cabSize', '#cabPallet', '#cabGenerator', '#mkadCab', '#resultCab');
-    } catch (e) {
-        
-    }
+    } catch (e) { }
 
     // калькулятор ремонта поддона
     try {
@@ -85,9 +83,56 @@ window.onload = function () {
             mkadPallet.addEventListener('input', palletFunc);
         }
         calcPallet('#palletSize', '#palletCab', '#palletRift', '#palletMkad', '#palletResult');
-    } catch (e) {
-        
-    }
+    } catch (e) { }
+
+    // калькулятор техобслуживания офисов
+    try {
+        const calcTechOffice = (techExit, techHours, techToFire, techResult) => {
+            const exitTech = document.querySelector(techExit),
+                hoursTech = document.querySelector(techHours),
+                toFireTech = document.querySelector(techToFire),
+                resultTech = document.querySelector(techResult);
+
+            let sum = 0;
+            const officeFunc = () => {
+                sum = 2000 + Math.round(((+exitTech.value) * (+hoursTech.value)));
+                if (toFireTech.checked) {
+                    sum = sum + 1000;
+                }
+                resultTech.textContent = sum;
+            };
+
+            exitTech.addEventListener('change', officeFunc);
+            hoursTech.addEventListener('change', officeFunc);
+            toFireTech.addEventListener('change', officeFunc);
+        }
+        calcTechOffice('#techExit', '#techHours', '#techToFire', '#techResult');
+    } catch (e) { }
+
+    // калькулятор техобслуживания магазинов
+    try {
+        const calcTechOffice = (shopExit, shopHours, shopToFire, shopResult) => {
+            const exitTech = document.querySelector(shopExit),
+                hoursTech = document.querySelector(shopHours),
+                toFireTech = document.querySelector(shopToFire),
+                resultTech = document.querySelector(shopResult);
+
+            let sum = 0;
+            const officeFunc = () => {
+                sum = 2000 + Math.round(((+exitTech.value) * (+hoursTech.value)));
+                if (toFireTech.checked) {
+                    sum = sum + 1000;
+                }
+                resultTech.textContent = sum;
+            };
+
+            exitTech.addEventListener('change', officeFunc);
+            hoursTech.addEventListener('change', officeFunc);
+            toFireTech.addEventListener('change', officeFunc);
+        }
+        calcTechOffice('#shopExit', '#shopHours', '#shopToFire', '#shopResult');
+    } catch (e) { }
+
 }
 
 // для отправки формы в телеграм

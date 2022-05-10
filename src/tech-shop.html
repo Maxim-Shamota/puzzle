@@ -421,17 +421,18 @@
 
 									<div class="cabin-calc__item cabin-calc__item-1">
 										<div class="item-calc__text">Площадь помещения</div>
-										<input autocomplete="off" type="number" name="form[]" data-error="Ошибка"
+										<input autocomplete="off" type="number" name="tech-shop" id=techShop data-error="Ошибка"
 											placeholder="кв.м" class="item-calc__input">
 									</div>
 
 									<div class="cabin-calc__item cabin-calc__item-2">
 										<div class="item-calc__text">Количество выездов в месяц</div>
 										<div class="item-calc__sel">
-											<select name="form[]" class="form">
-												<option value="1" selected>2</option>
-												<option value="2">4</option>
-												<option value="3">6</option>
+											<select name="shop-exit" id=shopExit class="form">
+												<option value="0" selected>выбрать</option>
+												<option value="2">2</option>
+												<option value="4">4</option>
+												<option value="6">6</option>
 											</select>
 										</div>
 									</div>
@@ -439,9 +440,10 @@
 									<div class="cabin-calc__item cabin-calc__item-3">
 										<div class="item-calc__text">Количество часов за один выезд</div>
 										<div class="item-calc__sel">
-											<select name="form[]" class="form">
-												<option value="1" selected>2</option>
-												<option value="2">4</option>
+											<select name="shop-hours" id=shopHours class="form">
+												<option value="0" selected>выбрать</option>
+												<option value="2">2</option>
+												<option value="4">4</option>
 											</select>
 										</div>
 									</div>
@@ -450,43 +452,43 @@
 										<div class="item-calc__title">Виды работ по обслуживанию</div>
 										<div class="item-calc__checkbox checkbox">
 											<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox"
-												value="1" name="form[]">
+												value="1" name="form[]" checked disabled>
 											<label for="c_1" class="checkbox__label">ТО систем электроснабжения</label>
 										</div>
 										<div class="item-calc__checkbox checkbox">
 											<input id="c_2" data-error="Ошибка" class="checkbox__input" type="checkbox"
-												value="1" name="form[]">
+												value="1" name="form[]" checked disabled>
 											<label for="c_2" class="checkbox__label">ТО сантехнического
 												оборудования</label>
 										</div>
 										<div class="item-calc__checkbox checkbox">
 											<input id="c_3" data-error="Ошибка" class="checkbox__input" type="checkbox"
-												value="1" name="form[]">
+												value="1" name="form[]" checked disabled>
 											<label for="c_3" class="checkbox__label">ТО входных групп, окон и
 												рольставней</label>
 										</div>
 										<div class="item-calc__checkbox checkbox">
 											<input id="c_4" data-error="Ошибка" class="checkbox__input" type="checkbox"
-												value="1" name="form[]">
+												value="1" name="form[]" checked disabled>
 											<label for="c_4" class="checkbox__label">ТО внутренних поверхностей
 												помещения</label>
 										</div>
 										<div class="item-calc__checkbox checkbox">
 											<input id="c_5" data-error="Ошибка" class="checkbox__input" type="checkbox"
-												value="1" name="form[]">
+												value="1" name="form[]" checked disabled>
 											<label for="c_5" class="checkbox__label">Эксплуатация мебельного
 												фонда</label>
 										</div>
 										<div class="item-calc__checkbox checkbox">
 											<input id="c_6" data-error="Ошибка" class="checkbox__input" type="checkbox"
-												value="1" name="form[]">
+												value="1" name="form[]" checked disabled>
 											<label for="c_6" class="checkbox__label">Капитальный ремонт систем и
 												оборудования</label>
 										</div>
 										<div class="item-calc__checkbox checkbox">
-											<input id="c_7" data-error="Ошибка" class="checkbox__input" type="checkbox"
-												value="1" name="form[]">
-											<label for="c_7" class="checkbox__label">ТО системы противопожарной
+											<input data-error="Ошибка" class="checkbox__input" type="checkbox"
+												value="1000" id=shopToFire name="shop-to-fire">
+											<label for="shopToFire" class="checkbox__label">ТО системы противопожарной
 												защиты</label>
 										</div>
 									</div>
@@ -495,7 +497,7 @@
 										<div class="item-calc__title">Прочие работы</div>
 										<div class="item-calc__checkbox checkbox">
 											<input id="c_8" data-error="Ошибка" class="checkbox__input" type="checkbox"
-												value="1" name="form[]">
+												value="1" name="form[]" checked disabled>
 											<label for="c_8" class="checkbox__label">Проведение текущего ремонта сверх
 												временных норм установленных
 												договором, проведение капитального ремонта систем и оборудования - по
@@ -503,12 +505,9 @@
 										</div>
 									</div>
 
-									<button type="submit" class="cabin-calc__btn button">Рассчитать</button>
-
 									<div class="cabin-calc__item cabin-calc__item-6">
 										<div class="item-calc__text">ТО вашего помещения будет стоить</div>
-										<input autocomplete="off" type="number" name="form[]" data-error="Ошибка"
-											placeholder="Итого" class="item-calc__input">
+										<div class="item-calc__input" id=shopResult name="shop-result">2000</div>
 									</div>
 
 								</div>
