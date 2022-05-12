@@ -79,6 +79,13 @@
                     }
                 }
             }
+
+            #kitchenResult {
+                min-width: rem(150);
+                min-height: rem(40);
+                color: $mainColor1;
+                font-weight: 600;
+            }
         }
 
         &__checkbox {

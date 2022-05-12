@@ -95,9 +95,9 @@ window.onload = function () {
 
             let sum = 0;
             const officeFunc = () => {
-                sum = 2000 + Math.round(((+exitTech.value) * (+hoursTech.value)));
+                sum = Math.round(((+exitTech.value) * (+hoursTech.value)));
                 if (toFireTech.checked) {
-                    sum = sum + 1000;
+                    sum = sum + 10000;
                 }
                 resultTech.textContent = sum;
             };
@@ -119,9 +119,9 @@ window.onload = function () {
 
             let sum = 0;
             const officeFunc = () => {
-                sum = 2000 + Math.round(((+exitTech.value) * (+hoursTech.value)));
+                sum = Math.round(((+exitTech.value) * (+hoursTech.value)));
                 if (toFireTech.checked) {
-                    sum = sum + 1000;
+                    sum = sum + 10000;
                 }
                 resultTech.textContent = sum;
             };
@@ -131,6 +131,91 @@ window.onload = function () {
             toFireTech.addEventListener('change', officeFunc);
         }
         calcTechOffice('#shopExit', '#shopHours', '#shopToFire', '#shopResult');
+    } catch (e) { }
+
+    // калькулятор сборки кухни
+    try {
+        const calcKitchen = (sizeKitchen, washerKitchen, washerCutoutKitchen, hoodKitchen, ovenKitchen, dishwasherKitchen, frozenKitchen, washingKitchen, coffeeKitchen, hobKitchen, ventKitchen, transKitchen, cornerKitchen, filterKitchen, kitchenResult) => {
+            const kitchenSize = document.querySelector(sizeKitchen),
+                kitcherWasher = document.querySelector(washerKitchen),
+                kitchenWasherCutout = document.querySelector(washerCutoutKitchen),
+                kitchenHood = document.querySelector(hoodKitchen),
+                kitchenOven = document.querySelector(ovenKitchen),
+                kitchenDishWasher = document.querySelector(dishwasherKitchen),
+                kitchenFrozen = document.querySelector(frozenKitchen),
+                kitchenWashing = document.querySelector(washingKitchen),
+                kitchenCoffee = document.querySelector(coffeeKitchen),
+                kitchenHob = document.querySelector(hobKitchen),
+                kitchenVent = document.querySelector(ventKitchen),
+                kitchenTrans = document.querySelector(transKitchen),
+                kitchenCorner = document.querySelector(cornerKitchen),
+                kitchenFilter = document.querySelector(filterKitchen),
+                resultKitchen = document.querySelector(kitchenResult);
+
+            const kitchenFunc = () => {
+                let sum = 0;
+
+                if (kitchenSize.value > 0) {
+                    sum = sum + (+kitchenSize.value * 2250);
+                }
+                if (kitcherWasher.checked) {
+                    sum = sum + (+kitcherWasher.value);
+                }
+                if (kitchenWasherCutout.checked) {
+                    sum = sum + (+kitchenWasherCutout.value);
+                }
+                if (kitchenHood.checked) {
+                    sum = sum + (+kitchenHood.value);
+                }
+                if (kitchenOven.checked) {
+                    sum = sum + (+kitchenOven.value);
+                }
+                if (kitchenDishWasher.checked) {
+                    sum = sum + (+kitchenDishWasher.value);
+                }
+                if (kitchenFrozen.checked) {
+                    sum = sum + (+kitchenFrozen.value);
+                }
+                if (kitchenWashing.checked) {
+                    sum = sum + (+kitchenWashing.value);
+                }
+                if (kitchenCoffee.checked) {
+                    sum = sum + (+kitchenCoffee.value);
+                }
+                if (kitchenHob.checked) {
+                    sum = sum + (+kitchenHob.value);
+                }
+                if (kitchenVent.checked) {
+                    sum = sum + (+kitchenVent.value);
+                }
+                if (kitchenTrans.checked) {
+                    sum = sum + (+kitchenTrans.value);
+                }
+                if (kitchenCorner.checked) {
+                    sum = sum + (+kitchenCorner.value);
+                }
+                if (kitchenFilter.checked) {
+                    sum = sum + (+kitchenFilter.value);
+                }
+                resultKitchen.textContent = sum;
+            };
+
+            kitchenSize.addEventListener('input', kitchenFunc);
+            kitcherWasher.addEventListener('change', kitchenFunc);
+            kitchenWasherCutout.addEventListener('change', kitchenFunc);
+            kitchenHood.addEventListener('change', kitchenFunc);
+            kitchenOven.addEventListener('change', kitchenFunc);
+            kitchenDishWasher.addEventListener('change', kitchenFunc);
+            kitchenFrozen.addEventListener('change', kitchenFunc);
+            kitchenWashing.addEventListener('change', kitchenFunc);
+            kitchenCoffee.addEventListener('change', kitchenFunc);
+            kitchenHob.addEventListener('change', kitchenFunc);
+            kitchenVent.addEventListener('change', kitchenFunc);
+            kitchenTrans.addEventListener('change', kitchenFunc);
+            kitchenCorner.addEventListener('change', kitchenFunc);
+            kitchenFilter.addEventListener('change', kitchenFunc);
+        }
+        calcKitchen('#sizeKitchen', '#washerKitchen', '#washerCutoutKitchen', '#hoodKitchen', '#ovenKitchen', '#dishwasherKitchen', '#frozenKitchen', '#washingKitchen', '#coffeeKitchen', '#hobKitchen', '#ventKitchen', '#transKitchen', '#cornerKitchen', '#filterKitchen', '#kitchenResult');
     } catch (e) { }
 
 }
