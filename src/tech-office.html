@@ -390,7 +390,7 @@
 
 							</div>
 
-							<div class="cabin-tabs__body cabin-calc">
+							<form class="cabin-tabs__body cabin-calc tech-office-form">
 								<div class="cabin-calc__title">Предварительный расчет стоимости технического
 									обслуживания</div>
 								<div class="cabin-calc__subtitle">
@@ -406,14 +406,14 @@
 
 									<div class="cabin-calc__item cabin-calc__item-1">
 										<div class="item-calc__text">Площадь помещения</div>
-										<input autocomplete="off" type="number" name="tech-office" id=techOffice data-error="Ошибка"
+										<input autocomplete="off" type="number" name="tech-office-square" id=techOffice data-error="Ошибка"
 											placeholder="кв.м" class="item-calc__input">
 									</div>
 
 									<div class="cabin-calc__item cabin-calc__item-2">
 										<div class="item-calc__text">Количество выездов в месяц</div>
 										<div class="item-calc__sel">
-											<select name="tech-exit" id=techExit class="form">
+											<select name="tech-departure" id=techExit class="form">
 												<option value="0" selected>выбрать</option>
 												<option value="2">2</option>
 												<option value="4">4</option>
@@ -472,7 +472,7 @@
 										</div>
 										<div class="item-calc__checkbox checkbox">
 											<input class="checkbox__input" type="checkbox"
-												value="1000" id=techToFire name="tech-to-fire">
+												value="10000" id=techToFire name="tech-to-fire">
 											<label for="techToFire" class="checkbox__label">ТО системы противопожарной
 												защиты</label>
 										</div>
@@ -497,15 +497,15 @@
 
 								</div>
 
-								<form class="cabin-calc__form">
+								<div class="cabin-calc__form">
 									<div class="cabin-calc__form-title">Отправить расчет менеджеру</div>
 									<input autocomplete="off" type="text" name="name" data-error="Ошибка"
 										placeholder="Ваше имя" class="cabin-calc__form-input input">
 									<input autocomplete="off" type="text" name="phone" data-error="Ошибка"
 										placeholder="Ваш телефон" class="cabin-calc__form-input input">
 									<button type="submit" class="cabin-calc__form-btn">Отправить</button>
-								</fo>
-							</div>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>

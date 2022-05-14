@@ -220,25 +220,421 @@ window.onload = function () {
 
 }
 
-// для отправки формы в телеграм
+// для отправки формы в телеграм callback
 
-jQuery(document).ready(function () {
-    jQuery("form").submit(function () { // Событие отправки с формы
-        var form_data = jQuery(this).serialize(); // Собираем данные из полей
-        jQuery.ajax({
-            type: "POST", // Метод отправки
-            url: "sendform.php", // Путь к PHP обработчику sendform.php
-            data: form_data,
-            success: swal({
-                title: "Ваши данные отправлены. Мы перезвоним Вам в течении 60 секунд!",
-                type: "success",
-                showConfirmButton: false,
-                timer: 2000
-            })
-        });
-        // $(this).find('input, textarea').prop('reset', true);
-        event.preventDefault();
+$('.popup__context').on('submit', function (event) {
+
+    event.stopPropagation();
+    event.preventDefault();
+
+    let form = this,
+        submit = $('.submit', form),
+        data = new FormData(),
+        files = $('input[type=file]')
+
+
+    $('.submit', form).val('Отправка...');
+    // $('input, textarea', form).attr('disabled', '');
+
+    data.append('name', $('[name="name"]', form).val());
+    data.append('phone', $('[name="phone"]', form).val());
+
+    files.each(function (key, file) {
+        let cont = file.files;
+        if (cont) {
+            $.each(cont, function (key, value) {
+                data.append(key, value);
+            });
+        }
     });
+
+    $.ajax({
+        url: 'ajax.php',
+        type: 'POST',
+        data: data,
+        cache: false,
+        dataType: 'json',
+        processData: false,
+        contentType: false,
+        xhr: function () {
+            let myXhr = $.ajaxSettings.xhr();
+
+            if (myXhr.upload) {
+                myXhr.upload.addEventListener('progress', function (e) {
+                    if (e.lengthComputable) {
+                        let percentage = (e.loaded / e.total) * 100;
+                        percentage = percentage.toFixed(0);
+                        $('.submit', form)
+                            .html(percentage + '%');
+                    }
+                }, false);
+            }
+
+            return myXhr;
+        },
+        error: function (jqXHR, textStatus) {
+            // Тут выводим ошибку
+        },
+        complete: function () {
+            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
+            console.log('Complete')
+            form.reset()
+        }
+    });
+
+    return false;
 });
 
+// для отправки формы в телеграм callback со страниц мастеров
 
+$('.cabin-calc__form').on('submit', function (event) {
+
+    event.stopPropagation();
+    event.preventDefault();
+
+    let form = this,
+        submit = $('.submit', form),
+        data = new FormData(),
+        files = $('input[type=file]')
+
+
+    $('.submit', form).val('Отправка...');
+    // $('input, textarea', form).attr('disabled', '');
+
+    data.append('name', $('[name="name"]', form).val());
+    data.append('phone', $('[name="phone"]', form).val());
+
+    files.each(function (key, file) {
+        let cont = file.files;
+        if (cont) {
+            $.each(cont, function (key, value) {
+                data.append(key, value);
+            });
+        }
+    });
+
+    $.ajax({
+        url: 'ajax.php',
+        type: 'POST',
+        data: data,
+        cache: false,
+        dataType: 'json',
+        processData: false,
+        contentType: false,
+        xhr: function () {
+            let myXhr = $.ajaxSettings.xhr();
+
+            if (myXhr.upload) {
+                myXhr.upload.addEventListener('progress', function (e) {
+                    if (e.lengthComputable) {
+                        let percentage = (e.loaded / e.total) * 100;
+                        percentage = percentage.toFixed(0);
+                        $('.submit', form)
+                            .html(percentage + '%');
+                    }
+                }, false);
+            }
+
+            return myXhr;
+        },
+        error: function (jqXHR, textStatus) {
+            // Тут выводим ошибку
+        },
+        complete: function () {
+            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
+            console.log('Complete')
+            form.reset()
+        }
+    });
+
+    return false;
+});
+
+// для отправки формы в телеграм callback with textarea
+
+$('.popup__context-tx').on('submit', function (event) {
+
+    event.stopPropagation();
+    event.preventDefault();
+
+    let form = this,
+        submit = $('.submit', form),
+        data = new FormData(),
+        files = $('input[type=file]')
+
+
+    $('.submit', form).val('Отправка...');
+    // $('input, textarea', form).attr('disabled', '');
+
+    data.append('name', $(' [name="name"]', form).val());
+    data.append('phone', $(' [name="phone"]', form).val());
+    data.append('message', $(' [name="offer"]', form).val());
+
+    files.each(function (key, file) {
+        let cont = file.files;
+        if (cont) {
+            $.each(cont, function (key, value) {
+                data.append(key, value);
+            });
+        }
+    });
+
+    $.ajax({
+        url: 'ajax.php',
+        type: 'POST',
+        data: data,
+        cache: false,
+        dataType: 'json',
+        processData: false,
+        contentType: false,
+        xhr: function () {
+            let myXhr = $.ajaxSettings.xhr();
+
+            if (myXhr.upload) {
+                myXhr.upload.addEventListener('progress', function (e) {
+                    if (e.lengthComputable) {
+                        let percentage = (e.loaded / e.total) * 100;
+                        percentage = percentage.toFixed(0);
+                        $('.submit', form)
+                            .html(percentage + '%');
+                    }
+                }, false);
+            }
+
+            return myXhr;
+        },
+        error: function (jqXHR, textStatus) {
+            // Тут выводим ошибку
+        },
+        complete: function () {
+            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
+            console.log('Complete')
+            form.reset()
+        }
+    });
+
+    return false;
+});
+
+// для отправки формы в телеграм техобслуживание офисов
+
+$('.tech-office-form').on('submit', function (event) {
+
+    event.stopPropagation();
+    event.preventDefault();
+
+    let form = this,
+        submit = $('.submit', form),
+        data = new FormData(),
+        files = $('input[type=file]')
+
+
+    $('.submit', form).val('Отправка...');
+    // $('input, textarea', form).attr('disabled', '');
+
+    data.append('page', 'office');
+    data.append('name', $(' [name="name"]', form).val());
+    data.append('phone', $(' [name="phone"]', form).val());
+    data.append('square', $(' [name="tech-office-square"]', form).val());
+    data.append('departure', $(' [name="tech-departure"]', form).val());
+    data.append('hours', $(' [name="tech-hours"]', form).val());
+    data.append('TO-fire', $(' [name="tech-to-fire"]', form).val());
+    data.append('total', $(' [name="tech-result"]', form).val());
+
+    files.each(function (key, file) {
+        let cont = file.files;
+        if (cont) {
+            $.each(cont, function (key, value) {
+                data.append(key, value);
+            });
+        }
+    });
+
+    $.ajax({
+        url: 'ajax.php',
+        type: 'POST',
+        data: data,
+        cache: false,
+        dataType: 'json',
+        processData: false,
+        contentType: false,
+        xhr: function () {
+            let myXhr = $.ajaxSettings.xhr();
+
+            if (myXhr.upload) {
+                myXhr.upload.addEventListener('progress', function (e) {
+                    if (e.lengthComputable) {
+                        let percentage = (e.loaded / e.total) * 100;
+                        percentage = percentage.toFixed(0);
+                        $('.submit', form)
+                            .html(percentage + '%');
+                    }
+                }, false);
+            }
+
+            return myXhr;
+        },
+        error: function (jqXHR, textStatus) {
+            // Тут выводим ошибку
+        },
+        complete: function () {
+            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
+            console.log('Complete')
+            form.reset()
+        }
+    });
+
+    return false;
+});
+
+// для отправки формы в телеграм техобслуживание магазинов
+
+$('.tech-shop-form').on('submit', function (event) {
+
+    event.stopPropagation();
+    event.preventDefault();
+
+    let form = this,
+        submit = $('.submit', form),
+        data = new FormData(),
+        files = $('input[type=file]')
+
+
+    $('.submit', form).val('Отправка...');
+    // $('input, textarea', form).attr('disabled', '');
+
+    data.append('page', 'shop');
+    data.append('name', $(' [name="name"]', form).val());
+    data.append('phone', $(' [name="phone"]', form).val());
+    data.append('square', $(' [name="tech-shop-square"]', form).val());
+    data.append('departure', $(' [name="shop-exit"]', form).val());
+    data.append('hours', $(' [name="shop-hours"]', form).val());
+    data.append('TO-fire', $(' [name="shop-to-fire"]', form).val());
+    data.append('total', $(' [name="shop-result"]', form).val());
+
+    files.each(function (key, file) {
+        let cont = file.files;
+        if (cont) {
+            $.each(cont, function (key, value) {
+                data.append(key, value);
+            });
+        }
+    });
+
+    $.ajax({
+        url: 'ajax.php',
+        type: 'POST',
+        data: data,
+        cache: false,
+        dataType: 'json',
+        processData: false,
+        contentType: false,
+        xhr: function () {
+            let myXhr = $.ajaxSettings.xhr();
+
+            if (myXhr.upload) {
+                myXhr.upload.addEventListener('progress', function (e) {
+                    if (e.lengthComputable) {
+                        let percentage = (e.loaded / e.total) * 100;
+                        percentage = percentage.toFixed(0);
+                        $('.submit', form)
+                            .html(percentage + '%');
+                    }
+                }, false);
+            }
+
+            return myXhr;
+        },
+        error: function (jqXHR, textStatus) {
+            // Тут выводим ошибку
+        },
+        complete: function () {
+            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
+            console.log('Complete')
+            form.reset()
+        }
+    });
+
+    return false;
+});
+
+// для отправки формы в телеграм сборка кухни
+
+$('.masterKitchen-form').on('submit', function (event) {
+
+    event.stopPropagation();
+    event.preventDefault();
+
+    let form = this,
+        submit = $('.submit', form),
+        data = new FormData(),
+        files = $('input[type=file]')
+
+
+    $('.submit', form).val('Отправка...');
+    // $('input, textarea', form).attr('disabled', '');
+
+    data.append('page', 'kitchen');
+    data.append('name', $(' [name="name"]', form).val());
+    data.append('phone', $(' [name="phone"]', form).val());
+    data.append('длина кухни', $(' [name="size-kitchen"]', form).val());
+    data.append('установка мойки', $(' [name="washer-kitchen"]', form).val());
+    data.append('вырезка под мойку', $(' [name="washerCutout-kitchen"]', form).val());
+    data.append('установка вытяжки', $(' [name="hood-kitchen"]', form).val());
+    data.append('установка духового шкафа', $(' [name="oven-kitchen"]', form).val());
+    data.append('установка посудомойки', $(' [name="dishwasher-kitchen"]', form).val());
+    data.append('установка холодильника', $(' [name="frozen-kitchen"]', form).val());
+    data.append('установка стиралки', $(' [name="washing-kitchen"]', form).val());
+    data.append('установка кофемашины', $(' [name="coffee-kitchen"]', form).val());
+    data.append('установка варочной панели', $(' [name="hob-kitchen"]', form).val());
+    data.append('отверстие в мебели под венттрубу', $(' [name="vent-kitchen"]', form).val());
+    data.append('подключение трансформатора', $(' [name="trans-kitchen"]', form).val());
+    data.append('изг.косого торца', $(' [name="corner-kitchen"]', form).val());
+    data.append('установка фильтра', $(' [name="filter-kitchen"]', form).val());
+    data.append('total', $(' [name="kitchen-result"]', form).val());
+
+    files.each(function (key, file) {
+        let cont = file.files;
+        if (cont) {
+            $.each(cont, function (key, value) {
+                data.append(key, value);
+            });
+        }
+    });
+
+    $.ajax({
+        url: 'ajax.php',
+        type: 'POST',
+        data: data,
+        cache: false,
+        dataType: 'json',
+        processData: false,
+        contentType: false,
+        xhr: function () {
+            let myXhr = $.ajaxSettings.xhr();
+
+            if (myXhr.upload) {
+                myXhr.upload.addEventListener('progress', function (e) {
+                    if (e.lengthComputable) {
+                        let percentage = (e.loaded / e.total) * 100;
+                        percentage = percentage.toFixed(0);
+                        $('.submit', form)
+                            .html(percentage + '%');
+                    }
+                }, false);
+            }
+
+            return myXhr;
+        },
+        error: function (jqXHR, textStatus) {
+            // Тут выводим ошибку
+        },
+        complete: function () {
+            // Тут можем что-то делать ПОСЛЕ успешной отправки формы
+            console.log('Complete')
+            form.reset()
+        }
+    });
+
+    return false;
+});

@@ -815,6 +815,29 @@ main {
 
     &__price {
         color: $mainColor1;
+        text-align: end;
+
+        &-a {
+            display: inline-block;
+            &::after {
+                content: '';
+                transition: all 0.8s ease 0s;
+                width: 0;
+                height: rem(2);
+                display: block;
+                background-color: $mainColor1;
+                margin: rem(3) 0px 0px 0px;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
 

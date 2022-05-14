@@ -405,7 +405,7 @@
 								
 							</div>
 
-							<div class="cabin-tabs__body cabin-calc">
+							<form class="cabin-tabs__body cabin-calc tech-shop-form">
 								<div class="cabin-calc__title">Предварительный расчет стоимости технического
 									обслуживания</div>
 								<div class="cabin-calc__subtitle">
@@ -421,7 +421,7 @@
 
 									<div class="cabin-calc__item cabin-calc__item-1">
 										<div class="item-calc__text">Площадь помещения</div>
-										<input autocomplete="off" type="number" name="tech-shop" id=techShop data-error="Ошибка"
+										<input autocomplete="off" type="number" name="tech-shop-square" id=techShop data-error="Ошибка"
 											placeholder="кв.м" class="item-calc__input">
 									</div>
 
@@ -487,7 +487,7 @@
 										</div>
 										<div class="item-calc__checkbox checkbox">
 											<input data-error="Ошибка" class="checkbox__input" type="checkbox"
-												value="1000" id=shopToFire name="shop-to-fire">
+												value="10000" id=shopToFire name="shop-to-fire">
 											<label for="shopToFire" class="checkbox__label">ТО системы противопожарной
 												защиты</label>
 										</div>
@@ -514,13 +514,13 @@
 
 								<div class="cabin-calc__form">
 									<div class="cabin-calc__form-title">Отправить расчет менеджеру</div>
-									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+									<input autocomplete="off" type="text" name="name" data-error="Ошибка"
 										placeholder="Ваше имя" class="cabin-calc__form-input input">
-									<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+									<input autocomplete="off" type="text" name="phone" data-error="Ошибка"
 										placeholder="Ваш телефон" class="cabin-calc__form-input input">
 									<button type="submit" class="cabin-calc__form-btn">Отправить</button>
 								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</div>
