@@ -435,11 +435,13 @@ $('.tech-office-form').on('submit', function (event) {
     data.append('page', 'office');
     data.append('name', $(' [name="name"]', form).val());
     data.append('phone', $(' [name="phone"]', form).val());
-    data.append('square', $(' [name="tech-office-square"]', form).val());
-    data.append('departure', $(' [name="tech-departure"]', form).val());
-    data.append('hours', $(' [name="tech-hours"]', form).val());
-    data.append('TO-fire', $(' [name="tech-to-fire"]', form).val());
-    data.append('total', $(' [name="tech-result"]', form).val());
+    data.append('площадь', $(' [name="tech-office-square"]', form).val());
+    data.append('количество выездов', $(' [name="tech-departure"]', form).val());
+    data.append('количество часов', $(' [name="tech-hours"]', form).val());
+    if ($('#techToFire').prop("checked")) {
+        data.append('TO противопожарной защиты', $(' [name="tech-to-fire"]', form).val());
+    }
+    // data.append('total', $(' [name="tech-result"]', form).val());
 
     files.each(function (key, file) {
         let cont = file.files;
@@ -506,11 +508,12 @@ $('.tech-shop-form').on('submit', function (event) {
     data.append('page', 'shop');
     data.append('name', $(' [name="name"]', form).val());
     data.append('phone', $(' [name="phone"]', form).val());
-    data.append('square', $(' [name="tech-shop-square"]', form).val());
-    data.append('departure', $(' [name="shop-exit"]', form).val());
-    data.append('hours', $(' [name="shop-hours"]', form).val());
-    data.append('TO-fire', $(' [name="shop-to-fire"]', form).val());
-    data.append('total', $(' [name="shop-result"]', form).val());
+    data.append('площадь', $(' [name="tech-shop-square"]', form).val());
+    data.append('количество выездов', $(' [name="shop-exit"]', form).val());
+    data.append('количество часов', $(' [name="shop-hours"]', form).val());
+    if ($('#shopToFire').prop("checked")) {
+        data.append('TO противопожарной защиты', $(' [name="shop-to-fire"]', form).val());
+    }
 
     files.each(function (key, file) {
         let cont = file.files;
@@ -578,20 +581,48 @@ $('.masterKitchen-form').on('submit', function (event) {
     data.append('name', $(' [name="name"]', form).val());
     data.append('phone', $(' [name="phone"]', form).val());
     data.append('длина кухни', $(' [name="size-kitchen"]', form).val());
-    data.append('установка мойки', $(' [name="washer-kitchen"]', form).val());
-    data.append('вырезка под мойку', $(' [name="washerCutout-kitchen"]', form).val());
-    data.append('установка вытяжки', $(' [name="hood-kitchen"]', form).val());
-    data.append('установка духового шкафа', $(' [name="oven-kitchen"]', form).val());
-    data.append('установка посудомойки', $(' [name="dishwasher-kitchen"]', form).val());
-    data.append('установка холодильника', $(' [name="frozen-kitchen"]', form).val());
-    data.append('установка стиралки', $(' [name="washing-kitchen"]', form).val());
-    data.append('установка кофемашины', $(' [name="coffee-kitchen"]', form).val());
-    data.append('установка варочной панели', $(' [name="hob-kitchen"]', form).val());
-    data.append('отверстие в мебели под венттрубу', $(' [name="vent-kitchen"]', form).val());
-    data.append('подключение трансформатора', $(' [name="trans-kitchen"]', form).val());
-    data.append('изг.косого торца', $(' [name="corner-kitchen"]', form).val());
-    data.append('установка фильтра', $(' [name="filter-kitchen"]', form).val());
-    data.append('total', $(' [name="kitchen-result"]', form).val());
+    if ($('#washerKitchen').prop("checked")) {
+        data.append('установка мойки', $(' [name="washer-kitchen"]', form).val());
+    }
+    if ($('#washerCutoutKitchen').prop("checked")) {
+        data.append('вырезка под мойку', $(' [name="washerCutout-kitchen"]', form).val());
+    }
+    if ($('#hoodKitchen').prop("checked")) {
+        data.append('установка вытяжки', $(' [name="hood-kitchen"]', form).val());
+    }
+    if ($('#ovenKitchen').prop("checked")) {
+        data.append('установка духового шкафа', $(' [name="oven-kitchen"]', form).val());
+    }
+    if ($('#dishwasherKitchen').prop("checked")) {
+        data.append('установка посудомойки', $(' [name="dishwasher-kitchen"]', form).val());
+    }
+    if ($('#frozenKitchen').prop("checked")) {
+        data.append('установка холодильника', $(' [name="frozen-kitchen"]', form).val());
+    }
+    if ($('#washingKitchen').prop("checked")) {
+        data.append('установка стиралки', $(' [name="washing-kitchen"]', form).val());
+    }
+    if ($('#coffeeKitchen').prop("checked")) {
+        data.append('установка кофемашины', $(' [name="coffee-kitchen"]', form).val());
+    }
+    if ($('#hobKitchen').prop("checked")) {
+        data.append('установка варочной панели', $(' [name="hob-kitchen"]', form).val());
+    }
+    if ($('#ventKitchen').prop("checked")) {
+        data.append('отверстие в мебели под венттрубу', $(' [name="vent-kitchen"]', form).val());
+    }
+    if ($('#transKitchen').prop("checked")) {
+        data.append('подключение трансформатора', $(' [name="trans-kitchen"]', form).val());
+    }
+    if ($('#cornerKitchen').prop("checked")) {
+        data.append('изг.косого торца', $(' [name="corner-kitchen"]', form).val());
+    }
+    if ($('#filterKitchen').prop("checked")) {
+        data.append('установка фильтра', $(' [name="filter-kitchen"]', form).val());
+    }
+    // if ($(' [name="kitchen-result"]', form).value) {
+    //     data.append('total', $(' [name="kitchen-result"]', form).val());
+    // }
 
     files.each(function (key, file) {
         let cont = file.files;

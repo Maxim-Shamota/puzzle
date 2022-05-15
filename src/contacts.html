@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Контакты"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="masterKitchen-page">
+
+			<div class="masterKitchen-page__container">
+				<h1 class="servCab-up__title">НАШИ КОНТАКТЫ</h1>
+				<div class="servCab-up">
+					<div class="servCab-up__image">
+						<iframe
+							src="https://yandex.ru/map-widget/v1/?um=constructor%3A5d4fb3e7b8bad032614eb9f6711753bfdaa37204fb9e9ef9184a264a4f4afd7f&amp;source=constructor"
+							width="655" height="441" frameborder="0"></iframe>
+					</div>
+					<div class="servCab-up__descr">
+						<p>Мы находимся рядом с Вами 24 часа в сутки, 7 дней в неделю, 365 дней в году!</p>
+						<p>Всегда в наличие комплектующие и расходные материалы.</p>
+						<p>В нашей компании действует гибкая система скидок для постоянных клиентов.</p>
+						<p>У нас индивидуальный подход к каждому заказчику.</p>
+						<p>Мы за долгосрочное сотрудничество!</p>
+					</div>
+				</div>
+
+				<div class="servCab__advantage">
+					@@include('html/_advantage.htm')
+				</div>
+
+			</div>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
