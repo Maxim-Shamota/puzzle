@@ -33,6 +33,8 @@ main {
             20px 20px 50px #D2D2D2;
         border: 4px solid #fff;
         overflow: hidden;
+        transition: transform 1s ease 0s;
+        transform: scale(1);
 
         @media (max-width:$mobile) {
             max-width: 100%;
@@ -42,15 +44,20 @@ main {
             border-radius: 6px;
             width: 100%;
             height: 100%;
-            transition: all 1s ease 0s;
             object-fit: cover;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            /* Firefox */
+            -ms-interpolation-mode: nearest-neighbor;
+            /* IE */
 
-            @media (any-hover: hover) {
-                &:hover {
-                    transform: scale(1.1);
-                }
-            }
         }
+
+        // @media (any-hover: hover) {
+        //     &:hover {
+        //         transform: scale(1.01);
+        //     }
+        // }
     }
 
     // .servCab-up__descr
@@ -92,7 +99,7 @@ main {
                 border-radius: 15px;
                 background: #F3F3F3;
                 box-shadow: -20px -20px 20px #FFFFFF,
-                20px 20px 50px #D2D2D2;
+                    20px 20px 50px #D2D2D2;
                 border: 4px solid #fff;
                 padding: rem(20) rem(20);
                 margin: rem(30) 0;
@@ -108,12 +115,13 @@ main {
                         td {
                             padding: rem(7) rem(5);
                             border: 1px solid $mainBorder;
+
                             a {
                                 font-weight: 600;
                                 transition: all 0.5s ease 0s;
 
-                                @media (any-hover: hover){
-                                    &:hover{
+                                @media (any-hover: hover) {
+                                    &:hover {
                                         color: $mainColor1;
                                     }
                                 }
@@ -744,6 +752,14 @@ main {
         align-items: center;
         justify-content: space-around;
         flex-wrap: wrap;
+
+        .servCab-up__image-fix {
+            width: 40%;
+        }
+
+        .servCab-up__descr-fix {
+            width: 100%;
+        }
     }
 
     // .servCab-price__item
@@ -766,21 +782,24 @@ main {
         border-radius: rem(10) rem(10) 0 0;
         // flex: 1 1 auto;
         overflow: hidden;
-        transition: all 1s ease 0s;
         height: 280px;
+        // transition: transform 1s ease 0s;
+        // transform: scale(1);
 
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-
+            // image-rendering: pixelated;
+            // image-rendering: -moz-crisp-edges; /* Firefox */
+            // -ms-interpolation-mode: nearest-neighbor;  /* IE */
         }
 
-        @media (any-hover: hover) {
-            &:hover {
-                transform: scale(1.05);
-            }
-        }
+        // @media (any-hover: hover) {
+        //     &:hover {
+        //         transform: scale(1.03);
+        //     }
+        // }
     }
 
     // .servCab-price__descr
@@ -790,9 +809,9 @@ main {
 
 .descr-cabPrice {
     padding: rem(20);
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
 
     // .descr-cabPrice__title
 
@@ -819,6 +838,7 @@ main {
 
         &-a {
             display: inline-block;
+
             &::after {
                 content: '';
                 transition: all 0.8s ease 0s;
@@ -842,4 +862,3 @@ main {
 }
 
 //========================================================================================================================================================
-

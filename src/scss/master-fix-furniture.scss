@@ -4,10 +4,6 @@
     @include adaptiveValue("padding-top", 50, 20);
     @include adaptiveValue("padding-bottom", 30, 20);
 
-    // .masterFixFurniture__container
-
-    &__container {}
-
     .servCab-tabs {
         margin-bottom: rem(20);
     }
@@ -53,6 +49,12 @@
         &__price {
             text-align: end;
             font-weight: 500;
+        }
+    }
+
+    .servCab-price__items {
+        .servCab-up__descr {
+            max-width: 100%;
         }
     }
 
