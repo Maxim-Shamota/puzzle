@@ -170,6 +170,7 @@
         font-weight: 600;
         @include adaptiveValue("font-size", 24, 20);
         padding: rem(10);
+        margin-top: rem(20);
     }
 
     // .fixPallet-calc__subtitle

@@ -1,0 +1,25 @@
+.contacts {
+    .servCab-up__descr-contacts {
+        max-width: 100%;
+        width: 99%;
+
+        h2 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.5rem;
+            padding-top: rem(10);
+            padding-bottom: rem(20);
+            line-height: 120%;
+        }
+
+        p {
+            padding-bottom: rem(10);
+            line-height: 120%;
+        }
+
+        a {
+            color: $mainColor1;
+        }
+    }
+
+}

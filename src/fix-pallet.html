@@ -16,7 +16,8 @@
 						<img src="@img/fixPallet/fixPallet1.jpg" alt="fixPallet">
 					</div>
 					<div class="servCab-up__descr">
-						<p>После душа обнаружили воду на полу? Проверьте поддон на наличие трещин. Через микротрещины поддона вода может
+						<p>После душа обнаружили воду на полу? Проверьте поддон на наличие трещин. Через микротрещины
+							поддона вода может
 							просачиваться и скапливается под душевой кабиной.</p>
 					</div>
 				</div>
@@ -30,9 +31,9 @@
 
 						<nav data-tabs-titles class="servCab-tabs__navigation">
 							<button type="button" class="servCab-tabs__title _tab-active">Описание</button>
-							<button type="button" class="servCab-tabs__title">Стоимость</button>
+							<!-- <button type="button" class="servCab-tabs__title">Стоимость</button> -->
 							<button type="button" class="servCab-tabs__title">Склад</button>
-							<button type="button" class="servCab-tabs__title">Калькулятор</button>
+							<!-- <button type="button" class="servCab-tabs__title">Калькулятор</button> -->
 						</nav>
 
 						<div data-tabs-body class="servCab-tabs__content">
@@ -43,12 +44,17 @@
 										<h2>Ремонт поддона</h2>
 									</div>
 									<div class="body-tabs1__up-descr">
-										<p>Такая неприятность может обернуться и более серьезными проблемами, таким как появление плесени, запах
-											сырости, а также увеличение трещины душевого поддона, что грозит уже затоплением соседей нижних этажей и
-											усложнением ремонта. В худшем случае, Вам придется сделать замену поддона душевой кабины, стоимость
-											которой обойдется дороже ремонта в несколько раз. Как только вы обнаружили небольшую трещину в поддоне
+										<p>Такая неприятность может обернуться и более серьезными проблемами, таким как
+											появление плесени, запах
+											сырости, а также увеличение трещины душевого поддона, что грозит уже
+											затоплением соседей нижних этажей и
+											усложнением ремонта. В худшем случае, Вам придется сделать замену поддона
+											душевой кабины, стоимость
+											которой обойдется дороже ремонта в несколько раз. Как только вы обнаружили
+											небольшую трещину в поддоне
 											душевой кабины, сразу звоните в «Боб-мастер»!</p>
-										<p>Наши специалисты имеют многолетний опыт работы в ремонте акриловых поддонов для душевых кабин.</p>
+										<p>Наши специалисты имеют многолетний опыт работы в ремонте акриловых поддонов
+											для душевых кабин.</p>
 									</div>
 								</div>
 
@@ -67,14 +73,13 @@
 
 								<div class="body-tabs1__up">
 									<div class="body-tabs1__up-descr">
-										<p>Эти работы гарантируют дальнейшее использование душевой кабины и сухой пол уже сегодня. Мы справляемся с
+										<p>Эти работы гарантируют дальнейшее использование душевой кабины и сухой пол
+											уже сегодня. Мы справляемся с
 											трещинами душевых поддонов в кратчайшее время!</p>
 									</div>
 								</div>
 
-							</div>
 
-							<div class="servCab-tabs__body servCab-price">
 								<div class="servCab-price__title">Стоимость ремонт поддона душевой кабины</div>
 								<div class="servCab-price__items">
 									<div class="servCab-price__item servCab-price__item1">
@@ -115,7 +120,8 @@
 											<img src="img/fixPallet/fixPallet5.jpg" alt="fixPallet">
 										</div>
 										<div class="servCab-price__descr descr-cabPrice">
-											<div class="descr-cabPrice__title">Герметизация швов примыканий, за м/п</div>
+											<div class="descr-cabPrice__title">Герметизация швов примыканий, за м/п
+											</div>
 											<!-- <div class="descr-cabPrice__subtitle">от 90х90</div> -->
 											<div class="descr-cabPrice__price">от 250 руб.</div>
 										</div>
@@ -133,14 +139,9 @@
 									</div>
 
 								</div>
-							</div>
 
-							<div class="servCab-tabs__body servCab-stock">
-								@@include('html/_stock.htm')
-							</div>
-
-							<div class="fixPallet-tabs__body fixPallet-calc">
-								<div class="fixPallet-calc__title">Предварительный расчет стоимости установки и подключения
+								<div class="fixPallet-calc__title">Предварительный расчет стоимости установки и
+									подключения
 									душевой кабины</div>
 								<div class="fixPallet-calc__subtitle">
 									<p>С помощью онлайн-калькулятора вы можете оценить примерную стоимость установки
@@ -173,7 +174,8 @@
 										</div>
 									</div>
 									<div class="fixPallet-calc__item">
-										<div class="item-calc__text">Размер трещины с учетом материалов для производства работ</div>
+										<div class="item-calc__text">Размер трещины с учетом материалов для производства
+											работ</div>
 										<div class="item-calc__sel">
 											<select name="pallet-rift" class="form" id=palletRift>
 												<option value="0" selected>выбрать</option>
@@ -186,12 +188,14 @@
 									<div class="fixPallet-calc__item">
 										<div class="item-calc__text">Потребуется ли выезд мастера за пределы МКАД? Если
 											да, то укажите удаленность от МКАД в км</div>
-										<input autocomplete="off" type="number" data-error="Ошибка" placeholder="км от МКАД"
-											class="item-calc__input" id=palletMkad name="pallet-mkad">
+										<input autocomplete="off" type="number" data-error="Ошибка"
+											placeholder="км от МКАД" class="item-calc__input" id=palletMkad
+											name="pallet-mkad">
 									</div>
 
 									<div class="fixPallet-calc__item fixPallet-calc__item-6">
-										<div class="item-calc__text">Стоимость установки и подключения душевой кабины равна </div>
+										<div class="item-calc__text">Стоимость установки и подключения душевой кабины
+											равна </div>
 										<div class="item-calc__input" id=palletResult name="pallet-result"></div>
 									</div>
 								</div>
@@ -204,6 +208,10 @@
 										placeholder="Ваш телефон" class="fixPallet-calc__form-input input">
 									<button type="submit" class="fixPallet-calc__form-btn">Отправить</button>
 								</div>
+							</div>
+
+							<div class="servCab-tabs__body servCab-stock">
+								@@include('html/_stock.htm')
 							</div>
 
 						</div>
