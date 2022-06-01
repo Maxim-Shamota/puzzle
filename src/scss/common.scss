@@ -1,6 +1,7 @@
 // Заголовки, общие БЄМ блоки и проче...
 
 main {
+    @include adaptiveValue("margin-top", 246, 200);
     margin-top: 246px;
 }
 
