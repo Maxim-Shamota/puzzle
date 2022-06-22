@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Отзывы"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/_header.htm',{})
+        <main class="reviews-page">
+
+            <div class="reviews-page__container">
+                <h1 class="servCab-up__title">Отзывы</h1>
+
+                <div class="mainCabs-page__item item-mainCabs">
+                    <div class="servCab-up">
+                        <div class="servCab-up__image">
+                            <img src="@img/reviews/man.png" alt="oldman">
+                        </div>
+                        <div class="servCab-up__descr">
+                            <p>Выражаю благодарность мастерам компании боб-мастер за качественную и аккуратную
+                                сборку душевой кабины. Купил душевую кабину Ниагара, по рекомендации заказал мастера
+                                с данной фирмы, мастер приехал в назначенному часу. Аккуратный в своей работе, в
+                                специальной форме и бахилах. Устанавливал около 3 часов, проверил всю
+                                функциональность кабины в работе. Герметик привез свой, выписал гарантию. Чистая
+                                работа. Мастера зовут Алексей. Вам спасибо. Мои рекомендации данному мастеру.</p>
+                            <p class="signature">Игорь Валерьевич</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainCabs-page__item item-mainCabs item-left-roll">
+                    <div class="servCab-up">
+                        <div class="servCab-up__descr">
+                            <p>Вчера заказывали услугу "Сборку душевой кабины" у компании Боб-Мастер. Специалист приехал
+                                к назначенному часу и сразу приступил к работе. Собрали кабину достаточно быстро и
+                                аккуратно. Входе работы задавала мастеру вопросы по душевой кабине, а тот без негатива
+                                на всё отвечал и консультировал. Выполненной работой и сервисом остались довольны,
+                                рекомендую!</p>
+                            <p class="signature">Ирина Павлова</p>
+                        </div>
+                        <div data-da=".item-left-roll,600,0" class="servCab-up__image">
+                            <img src="@img/reviews/woman.png" alt="woman">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mainCabs-page__item item-mainCabs">
+                    <div class="servCab-up">
+                        <div class="servCab-up__image">
+                            <img src="@img/reviews/woman2.png" alt="woman">
+                        </div>
+                        <div class="servCab-up__descr">
+                            <p>Хочу поблагодарить мастера Евгения за качественную и довольно сложную чистку душевой
+                                кабины от грибка и налета. Кабина сдавалась квартирантам и не чистилась вообще.
+                                Специалист компании Боб-Мастер несколько часов отмывал её каким-то специальным
+                                раствором. Стоимость за такую работу приемлемая, большое спасибо Боб-Мастер!</p>
+                            <p class="signature">Валентина</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="servCab__advantage">
+                @@include('html/_advantage.htm')
+            </div>
+    </div>
+
+    </main>
+    @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+</body>
+
+</html>
