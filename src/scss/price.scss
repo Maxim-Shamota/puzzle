@@ -177,9 +177,27 @@
 
         &__up-title {
             text-align: center;
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            width: 100%;
+            justify-content: space-between;
+            padding-top: rem(30);
             font-weight: 600;
             @include adaptiveValue("font-size", 24, 20);
-            padding-top: rem(30);
+
+            &::before {
+                transition: all 0.5s ease 0s;
+            }
+
+            &._spoller-active {
+                transition: all 0.3s ease 0s;
+
+                &::before {
+                    transform: rotate(-180deg);
+                    color: $mainColor1;
+                }
+            }
         }
 
         // .price-table__table
@@ -217,8 +235,13 @@
                     }
 
                     td:nth-child(2) {
-                        min-width: rem(80);
+                        @include adaptiveValue("min-width", 120, 90);
                     }
+                }
+
+                .price-new {
+                    color: red;
+                    cursor: none;
                 }
             }
 

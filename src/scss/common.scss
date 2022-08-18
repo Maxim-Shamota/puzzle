@@ -863,3 +863,31 @@ main {
 }
 
 //========================================================================================================================================================
+
+.new-tabs {
+    align-items: self-start;
+
+    .adv-item {
+        min-width: rem(180);
+
+        &._tab-active {
+            .adv-item__icon {
+                background: #c7c7c7;
+                box-shadow: inset -20px -20px 50px #e1e1e1,
+                    inset 20px 20px 50px #dfdfdf;
+            }
+
+            .adv-item__img {
+                &::before {
+                    color: #14328a;
+                }
+            }
+
+            .adv-item__text {
+                max-width: none;
+                font-weight: 700;
+                // font-size: 105%;
+            }
+        }
+    }
+}

@@ -22,18 +22,30 @@
 					</div>
 				</div>
 
-				<div class="servCab">
-					@@include('html/_advantage.htm')
-				</div>
-
 				<div class="servCab-tabs">
+
 					<div data-tabs class="servCab-tabs">
 
-						<nav data-tabs-titles class="servCab-tabs__navigation">
-							<button type="button" class="servCab-tabs__title _tab-active">Описание</button>
-							<button type="button" class="servCab-tabs__title">Склад</button>
-							<button type="button" class="servCab-tabs__title">Прайс</button>
-						</nav>
+						<div data-tabs-titles class="adv-items new-tabs">
+
+							<button type="button" class="adv-item adv-item2 _tab-active">
+								<div class="adv-item__icon">
+									<div class="adv-item__icon-into">
+										<span class="adv-item__img _icon-clock"></span>
+									</div>
+								</div>
+								<div class="adv-item__text">Описание</div>
+							</button>
+
+							<button type="button" class="adv-item adv-item3">
+								<div class="adv-item__icon">
+									<div class="adv-item__icon-into">
+										<span class="adv-item__img _icon-document"></span>
+									</div>
+								</div>
+								<div class="adv-item__text">Прайс на материалы</div>
+							</button>
+						</div>
 
 						<div data-tabs-body class="servCab-tabs__content">
 							<div class="servCab-tabs__body servCab-tabs1__body body-tabs1">
@@ -261,10 +273,6 @@
 									</table>
 								</div>
 
-							</div>
-
-							<div class="fixRolls-tabs__body fixRolls-stock">
-								@@include('html/_stock.htm')
 							</div>
 
 							<div class="fixRolls-tabs__body fixRolls-price">
