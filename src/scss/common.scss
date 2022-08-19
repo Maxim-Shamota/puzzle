@@ -868,7 +868,7 @@ main {
     align-items: self-start;
 
     .adv-item {
-        min-width: rem(180);
+        max-width: rem(180);
 
         &._tab-active {
             .adv-item__icon {

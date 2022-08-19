@@ -174,9 +174,13 @@
     }
 
     &-table {
+        &:not(:last-child) {
+            border-bottom: 1px solid $mainColor2;
+            padding-bottom: 20px;
+        }
 
         &__up-title {
-            text-align: center;
+            text-align: left;
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
@@ -185,6 +189,13 @@
             padding-top: rem(30);
             font-weight: 600;
             @include adaptiveValue("font-size", 24, 20);
+            transition: all 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $mainColor1;
+                }
+            }
 
             &::before {
                 transition: all 0.5s ease 0s;
