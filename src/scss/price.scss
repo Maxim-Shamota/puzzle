@@ -256,6 +256,13 @@
                 }
             }
 
+            .price-image {
+                @include adaptiveValue("width", 50, 30);
+                img {
+                    width: 100%;
+                }
+            }
+
         }
     }
 
