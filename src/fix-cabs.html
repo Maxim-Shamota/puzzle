@@ -22,39 +22,27 @@
 					</div>
 				</div>
 
+				<div class="servCab__advantage">
+					@@include('html/_advantage.htm')
+				</div>
+
 				<div class="servCab-tabs">
 
 					<div data-tabs class="servCab-tabs">
 
-						<div data-tabs-titles class="adv-items new-tabs">
-
-							<button type="button" class="adv-item adv-item2 _tab-active">
-								<div class="adv-item__icon">
-									<div class="adv-item__icon-into">
-										<span class="adv-item__img _icon-document"></span>
-									</div>
-								</div>
-								<div class="adv-item__text">Описание и цены на работы</div>
-							</button>
-
-							<button type="button" class="adv-item adv-item3">
-								<div class="adv-item__icon">
-									<div class="adv-item__icon-into">
-										<span class="adv-item__img _icon-ruble"></span>
-									</div>
-								</div>
-								<div class="adv-item__text">Цены на материалы</div>
-							</button>
-						</div>
+						<nav data-tabs-titles class="servCab-tabs__navigation">
+							<button type="button" class="servCab-tabs__title _tab-active">Работы</button>
+							<!-- <button type="button" class="servCab-tabs__title">Стоимость</button> -->
+							<button type="button" class="servCab-tabs__title">Материалы</button>
+						</nav>
 
 						<div data-tabs-body class="servCab-tabs__content">
 							<div class="servCab-tabs__body servCab-tabs1__body body-tabs1">
 
 								<div class="body-tabs1__up">
-									<div class="body-tabs1__down-title">
+									<div class="body-tabs1__up-title">
 										<h2>Распространенные поломки, их причины и устранение</h2>
 									</div>
-
 									<div class="body-tabs1__up-descr">
 										<p>Специалисты компании «Боб-Мастер» отлично знакомы с конструктивными особенностями душевых кабин различных
 											производителей (Appollo, Edelform, IDO, Jacuzzi, Niagara, River и многих других брендов) и с поломками,
@@ -62,79 +50,185 @@
 											отремонтировать сломавшуюся деталь. Если же деталь не подлежит воcстановлению, мы произведем замену в тот
 											же день! Все расходные материалы у нас в наличии, как у ведущих специалистов. Так же требуется обратить
 											внимание на расположение душевой кабины. Если пространство для установки ограничено, стоимость услуг будет
-											выше. На 1/3-1/5 по коэффициенту цены. Мы способны вернуть к жизни
-											кабинку любого размера 80×80, 90×90, 120×80, 150×80 и больше как отечественных, так и зарубежных
-											производителей.</p>
+											выше. На 1/3-1/5 по коэффициенту цены. Мы способны вернуть к жизни кабинку любого размера 80×80, 90×90,
+											120×80, 150×80 и больше как отечественных, так и зарубежных производителей.</p>
 									</div>
-
 								</div>
 
-								<div class="body-tabs1__up">
+								<div class="body-tabs1__down">
 									<div class="body-tabs1__down-title">
-										<h2>Протечка душевой кабины</h2>
+										<h2>Основные способы устранения поломок</h2>
+									</div>
+									<div class="body-tabs1__down-descr">
+										<div data-spollers class="spollers servCab-spoll1">
+											<div class="servCab-spoll1__item">
+												<button type="button" data-spoller class="servCab-spoll1__title _icon-arrow-down">Протечка душевой кабины
+													<span>&#10004</span></button>
+												<div class="servCab-spoll1__body">
+													<div class="servCab-spoll__image"><img src="@img/cabin/cabin2.jpg" alt="cabin"></div>
+													<p>Протечка чаще всего бывает вызвана некачественной герметизацией швов и соединений, механическим износом
+														шлангов, резиновых прокладок или хомутов. Устраняется протечка заменой шлангов и комплектующих,
+														зачисткой швов от известковых отложений и их новой герметизацией, ремонтом поддона.</p>
+												</div>
+											</div>
+										</div>
+
+										<div data-spollers class="spollers servCab-spoll2">
+											<div class="servCab-spoll2__item">
+												<button type="button" data-spoller class="servCab-spoll2__title _icon-arrow-down">Протечка смесителя
+													<span>&#10004</span></button>
+												<div class="servCab-spoll2__body">
+													<p>Протечка смесителя либо тугое переключение режимов бывают вызваны внутренним загрязнением, ржавчиной и
+														известью, трещинами на корпусе картриджа, износом резиновых прокладок и колец. Устраняются поломки
+														ремонтом либо заменой картриджа и смесителя.</p>
+												</div>
+											</div>
+										</div>
+
+										<div data-spollers class="spollers servCab-spoll3">
+											<div class="servCab-spoll3__item">
+												<button type="button" data-spoller class="servCab-spoll3__title _icon-arrow-down">Плохо закрываются
+													дверцы <span>&#10004</span></button>
+												<div class="servCab-spoll3__body">
+													<div class="servCab-spol3__image"><img src="@img/cabin/cabin3.jpg" alt="cabin"></div>
+													<p>Это может быть вызвано износом роликов или трещиной в одном из них, размагничиванием замковой ленты,
+														отвечающей за плотное смыкание дверок душевой кабины. Ремонт заключается в замене и регулировке
+														роликов, замене магнитного замка дверцы.</p>
+												</div>
+											</div>
+										</div>
+
+										<div data-spollers class="spollers servCab-spoll6">
+											<div class="servCab-spoll6__item">
+												<button type="button" data-spoller class="servCab-spoll6__title _icon-arrow-down">Не работает душ или
+													гидромассаж <span>&#10004</span></button>
+												<div class="servCab-spoll6__body">
+													<!-- <div class="servCab-spol4__image"><img src="@img/cabin/cabin4.jpg" alt="cabin"></div> -->
+													<p>Чаще всего причина неисправности кроется в известковых отложениях на поверхности изливов. Устраняется
+														проблема капитальной чисткой или заменой душевых леек и форсунок.</p>
+												</div>
+											</div>
+										</div>
+
+										<div data-spollers class="spollers servCab-spoll9">
+											<div class="servCab-spoll9__item">
+												<button type="button" data-spoller class="servCab-spoll9__title _icon-arrow-down">Лопнувшее или помутневшее
+													стекло <span>&#10004</span></button>
+												<div class="servCab-spoll9__body">
+													<!-- <div class="servCab-spol4__image"><img src="@img/cabin/cabin4.jpg" alt="cabin"></div> -->
+													<p>Причиной проблемы может стать как производственный дефект, так и некорректная эксплуатация гидроблока.
+														Устраняется путем замены стекла.</p>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="servCab-price__title">Ремонт и обслуживание душевой кабины</div>
+								<div class="servCab-price__items">
+									<div class="servCab-price__item servCab-price__item1">
+										<div class="servCab-price__image">
+											<img src="img/fixRolls/fixRolls2.jpg" alt="fixRolls">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Замена роликов душевой кабины</div>
+											<div class="descr-cabPrice__subtitle">от 600 руб.</div>
+											<div class="descr-cabPrice__price"><a href="./fix-rolls.html">Подробнее</a></div>
+										</div>
 									</div>
 
-									<div class="body-tabs1__up-descr">
-										<p>Протечка чаще всего бывает вызвана некачественной герметизацией швов и соединений, механическим износом
-											шлангов, резиновых прокладок или хомутов. Устраняется протечка заменой шлангов и комплектующих, зачисткой
-											швов от известковых отложений и их новой герметизацией, ремонтом поддона.</p>
+									<div class="servCab-price__item servCab-price__item2">
+										<div class="servCab-price__image">
+											<img src="img/fixClear/fixClear1.jpg" alt="fixClear">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Дезинфекция</div>
+											<div class="descr-cabPrice__subtitle">от 1800 руб.</div>
+											<div class="descr-cabPrice__price"><a href="./fix-clear.html">Подробнее</a></div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item servCab-price__item3">
+										<div class="servCab-price__image">
+											<img src="img/fixMixer/fixMixer2.jpg" alt="fixMixer">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Замена картриджа</div>
+											<div class="descr-cabPrice__subtitle">от 1600 руб.</div>
+											<div class="descr-cabPrice__price"><a href="./fix-mixer.html">Подробнее</a></div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item servCab-price__item4">
+										<div class="servCab-price__image">
+											<img src="img/fixSiphon/fixSiphon1.jpg" alt="fixSiphon">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Замена / ремонт сифона</div>
+											<div class="descr-cabPrice__subtitle">650 руб.</div>
+											<div class="descr-cabPrice__price"><a href="./fix-siphon.html">Подробнее</a></div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item servCab-price__item5">
+										<div class="servCab-price__image">
+											<img src="img/fixPallet/fixPallet2.jpg" alt="fixPallet">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Ремонт поддона</div>
+											<div class="descr-cabPrice__subtitle">от 3200 руб.</div>
+											<div class="descr-cabPrice__price"><a href="./fix-pallet.html">Подробнее</a></div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item servCab-price__item6">
+										<div class="servCab-price__image">
+											<img src="img/fixShowerHead/fixShowerHead1.jpg" alt="fixShowerHead">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Ремонт / замена тропического душа</div>
+											<div class="descr-cabPrice__subtitle">от 550 руб.</div>
+											<div class="descr-cabPrice__price"><a href="./fix-showerHead.html">Подробнее</a></div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item servCab-price__item7">
+										<div class="servCab-price__image">
+											<img src="img/fixGenerator/fixGenerator1.jpg" alt="fixGenerator">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Ремонт парогенератора</div>
+											<div class="descr-cabPrice__subtitle">от 900 руб.</div>
+											<div class="descr-cabPrice__price"><a href="./fix-generator.html">Подробнее</a></div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item servCab-price__item8">
+										<div class="servCab-price__image">
+											<img src="img/fixMixer/fixMixer3.jpg" alt="fixMixer">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Замена /ремонт терморегулятора (смесителя)</div>
+											<div class="descr-cabPrice__subtitle">от 1500 руб.</div>
+											<div class="descr-cabPrice__price"><a href="./fix-mixer.html">Подробнее</a></div>
+										</div>
+									</div>
+
+									<div class="servCab-price__item servCab-price__item9">
+										<div class="servCab-price__image">
+											<img src="img/fixGlass/fixGlass1.jpg" alt="fixGlass">
+										</div>
+										<div class="servCab-price__descr descr-cabPrice">
+											<div class="descr-cabPrice__title">Замена стекла в душевой кабине</div>
+											<div class="descr-cabPrice__subtitle">от 2200 руб.</div>
+											<div class="descr-cabPrice__price"><a href="./fix-glass.html">Подробнее</a></div>
+										</div>
 									</div>
 
 								</div>
 
-								<div class="body-tabs1__up">
-									<div class="body-tabs1__down-title">
-										<h2>Протечка смесителя</h2>
-									</div>
-
-									<div class="body-tabs1__up-descr">
-										<p>Протечка смесителя либо тугое переключение режимов бывают вызваны внутренним загрязнением, ржавчиной и
-											известью, трещинами на корпусе картриджа, износом резиновых прокладок и колец. Устраняются поломки
-											ремонтом либо заменой картриджа и смесителя.</p>
-									</div>
-
-								</div>
-
-								<div class="body-tabs1__up">
-									<div class="body-tabs1__down-title">
-										<h2>Плохо закрываются дверцы</h2>
-									</div>
-
-									<div class="body-tabs1__up-descr">
-										<p>Это может быть вызвано износом роликов или трещиной в одном из них, размагничиванием замковой ленты,
-											отвечающей за плотное смыкание дверок душевой кабины. Ремонт заключается в замене и регулировке роликов,
-											замене магнитного замка дверцы.</p>
-									</div>
-
-								</div>
-
-								<div class="body-tabs1__up">
-									<div class="body-tabs1__down-title">
-										<h2>Не работает душ или гидромассаж</h2>
-									</div>
-
-									<div class="body-tabs1__up-descr">
-										<p>Чаще всего причина неисправности кроется в известковых отложениях на поверхности изливов. Устраняется
-											проблема капитальной чисткой или заменой душевых леек и форсунок.</p>
-									</div>
-
-								</div>
-
-								<div class="body-tabs1__up">
-									<div class="body-tabs1__down-title">
-										<h2>Лопнувшее или помутневшее стекло</h2>
-									</div>
-
-									<div class="body-tabs1__up-descr">
-										<p>Причиной проблемы может стать как производственный дефект, так и некорректная эксплуатация гидроблока.
-											Устраняется путем замены стекла.</p>
-									</div>
-
-								</div>
-
-
-
-								<div class="body-tabs1__up">
+								<!-- <div class="body-tabs1__up">
 									<div class="body-tabs1__down-title">
 										<h2>Цены на ремонт душевой кабины</h2>
 									</div>
@@ -271,7 +365,7 @@
 											<td>от 150 руб.</td>
 										</tr>
 									</table>
-								</div>
+								</div> -->
 
 							</div>
 

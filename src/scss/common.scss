@@ -282,6 +282,13 @@ main {
             justify-content: flex-end;
             width: 100%;
             @include adaptiveValue("font-size", 18, 16);
+            transition: color 0.8s ease 0s;
+
+            @media (any-hover: hover){
+                &:hover{
+                    color: $mainColor1;
+                }
+            }
 
             &::before {
                 margin-left: auto;
@@ -369,6 +376,13 @@ main {
             justify-content: flex-end;
             width: 100%;
             @include adaptiveValue("font-size", 18, 16);
+            transition: color 0.8s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $mainColor1;
+                }
+            }
 
             &::before {
                 margin-left: auto;
@@ -431,6 +445,13 @@ main {
             justify-content: flex-end;
             width: 100%;
             @include adaptiveValue("font-size", 18, 16);
+            transition: color 0.8s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $mainColor1;
+                }
+            }
 
             &::before {
                 margin-left: auto;
@@ -524,6 +545,13 @@ main {
             justify-content: flex-end;
             width: 100%;
             @include adaptiveValue("font-size", 18, 16);
+            transition: color 0.8s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $mainColor1;
+                }
+            }
 
             &::before {
                 margin-left: auto;
@@ -586,6 +614,13 @@ main {
             justify-content: flex-end;
             width: 100%;
             @include adaptiveValue("font-size", 18, 16);
+            transition: color 0.8s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $mainColor1;
+                }
+            }
 
             &::before {
                 margin-left: auto;
@@ -683,6 +718,13 @@ main {
             justify-content: flex-end;
             width: 100%;
             @include adaptiveValue("font-size", 18, 16);
+            transition: color 0.8s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $mainColor1;
+                }
+            }
 
             &::before {
                 margin-left: auto;

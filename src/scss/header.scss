@@ -97,6 +97,22 @@
 	&__up {
 		background-color: #2D2D2D;
 
+		.middle-menu-buttons__phones {
+
+			display: none;
+
+			@media (max-width:$tablet) {
+				display: flex;
+				flex-direction: column;
+				margin: rem(10) 0;
+
+				.spollers__item {
+					width: 170px;
+				}
+			}
+		}
+
+
 		&__container {
 			display: flex;
 			justify-content: space-between;
@@ -257,6 +273,10 @@
 		display: flex;
 		flex-direction: column;
 		margin: rem(10) 0;
+
+		@media (max-width:$tablet) {
+			display: none;
+		}
 	}
 
 	// .middle-menu-buttons__phone
@@ -277,8 +297,7 @@
 		.spollers__item {
 			position: relative;
 			display: flex;
-
-
+			justify-content: space-between;
 
 			a {
 				padding-right: rem(10);
@@ -624,8 +643,8 @@
 		&__close {
 			transition: all 0.5s ease 0s;
 
-			@media (any-hover: hover){
-				&:hover{
+			@media (any-hover: hover) {
+				&:hover {
 					color: $mainColor1;
 				}
 			}
