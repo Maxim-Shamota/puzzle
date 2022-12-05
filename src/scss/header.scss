@@ -238,9 +238,9 @@
 
 	&__item {
 		@include adaptiveValue("padding-right", 30, 5);
-		transition: all 0.8s ease 0s;
 		display: inline-block;
 		@include adaptiveValue("font-size", 16, 14);
+		transition: all 0.8s ease 0s;
 
 		&::after {
 			content: '';

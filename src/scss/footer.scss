@@ -99,6 +99,43 @@
         }
     }
 
+    &__politics {
+        text-align: center;
+        margin-top: rem(20);
+        a {
+            display: inline-block;
+            transition: all 0.8s ease 0s;
+            font-weight: 500;
+            @include adaptiveValue("font-size", 14, 10);
+
+            &::after {
+                content: '';
+                transition: all 0.8s ease 0s;
+                width: 0;
+                height: rem(2);
+                display: block;
+                background-color: $mainColor1;
+                margin: rem(3) 0px 0px 0px;
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $mainColor1;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+
+        p {
+            margin-top: rem(5);
+            @include adaptiveValue("font-size", 14, 10);
+        }
+    }
+
     // .footer__right
 
     &__right {
