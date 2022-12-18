@@ -107,7 +107,9 @@
 				margin: rem(10) 0;
 
 				.spollers__item {
-					width: 170px;
+					width: 171px;
+					font-size: rem(16);
+					color: #fff;
 				}
 			}
 		}
@@ -287,7 +289,7 @@
 		text-align: center;
 		@include adaptiveValue("font-size", 16, 12);
 		background: #F3F3F3;
-		box-shadow: -10px -10px 20px #FFFFFF,
+		box-shadow: -10px -4px 20px #FFFFFF,
 			10px 10px 20px rgba(0, 0, 0, 0.09);
 		border-radius: 15px;
 		border: 1px solid $mainBorder;
@@ -401,7 +403,7 @@
 			text-align: center;
 			@include adaptiveValue("font-size", 16, 12);
 			background: #F3F3F3;
-			box-shadow: -10px -10px 16px #FFFFFF,
+			box-shadow: -10px -4px 16px #FFFFFF,
 				10px 10px 20px rgba(0, 0, 0, 0.09);
 			border-radius: 15px;
 			border: 1px solid $mainBorder;
