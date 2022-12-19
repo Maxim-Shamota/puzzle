@@ -163,6 +163,7 @@
 .btn-footer {
     display: flex;
     gap: rem(30);
+    justify-content: center;
 
     @media (max-width:$mobile) {
         gap: 0;
