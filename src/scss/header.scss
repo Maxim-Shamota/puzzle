@@ -88,6 +88,20 @@
 		top: 0;
 		z-index: 50;
 	}
+
+	.icon-menu {
+		@media (max-width:$tablet) {
+			display: none;
+		}
+	}
+
+	&-main {
+		.icon-menu {
+			@media (max-width:$tablet) {
+				display: block;
+			}
+		}
+	}
 }
 
 .header-menu {
@@ -121,6 +135,7 @@
 			align-items: center;
 			color: $mainColor1;
 		}
+
 	}
 
 	// .header-menu__up-list
@@ -467,8 +482,6 @@
 				}
 			}
 		}
-
-
 	}
 
 

@@ -56,7 +56,7 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        padding-bottom: rem(20);
+        padding-bottom: rem(4);
         font-weight: 600;
         gap: rem(20);
         flex-wrap: wrap;
@@ -102,6 +102,7 @@
     &__politics {
         text-align: center;
         margin-top: rem(20);
+
         a {
             display: inline-block;
             transition: all 0.8s ease 0s;
@@ -152,8 +153,8 @@
         box-shadow: -20px -20px 50px #FFFFFF,
         20px 20px 50px #D2D2D2;
         border: 1px solid $mainBorder;
-        
-        @media (max-width:$tablet){
+
+        @media (max-width:$tablet) {
             margin-right: rem(10);
         }
 
@@ -169,6 +170,10 @@
         gap: 0;
         max-width: rem(200);
         margin: 0 auto;
+    }
+
+    @media (max-width: 380px) {
+        display: none;
     }
 
     // .btn-footer__phones
