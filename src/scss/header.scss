@@ -474,14 +474,24 @@
 				z-index: 2;
 			}
 
-			.menu-open & {
+			.menu-active & {
 				left: 0;
 
 				&::before {
 					left: 0;
 				}
 			}
+
+			// .menu-open & {
+			// 	left: 0;
+
+			// 	&::before {
+			// 		left: 0;
+			// 	}
+			// }
 		}
+
+
 	}
 
 

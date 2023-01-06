@@ -220,6 +220,18 @@ window.onload = function () {
 
 }
 
+//Бургер
+const iconMenu = document.querySelector('.header-menu__up__container');
+
+if (iconMenu) {
+    const menuBody = document.querySelector('.header-menu__down');
+    iconMenu.addEventListener("click", function (e) {
+        document.body.classList.toggle('lock');
+        iconMenu.classList.toggle('menu-active');
+        menuBody.classList.toggle('menu-active');
+    });
+}
+
 // для отправки формы в телеграм callback
 
 $('.popup__context').on('submit', function (event) {

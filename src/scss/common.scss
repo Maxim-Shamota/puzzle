@@ -986,6 +986,7 @@ main {
 
     &__items {
         @include adaptiveValue("padding-top", 50, 30);
+        @include adaptiveValue("padding-bottom", 30, 10);
         display: flex;
         gap: rem(30);
         align-items: center;
