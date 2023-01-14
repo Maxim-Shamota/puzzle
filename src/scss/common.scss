@@ -5,6 +5,10 @@ main {
     margin-top: 246px;
 }
 
+h1 {
+    text-transform: uppercase;
+}
+
 .servCab-up {
     display: flex;
     @include adaptiveValue("gap", 30, 20);
