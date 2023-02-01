@@ -9,12 +9,16 @@ h1 {
     text-transform: uppercase;
 }
 
+.articles-title {
+    font-weight: 600;
+}
+
 .servCab-up {
     display: flex;
     @include adaptiveValue("gap", 30, 20);
     @include adaptiveValue("padding-bottom", 30, 20);
 
-    @media (max-width:$mobile) {
+    @media (max-width: $mobile) {
         flex-direction: column;
     }
 
@@ -33,15 +37,14 @@ h1 {
     &__image {
         border-radius: 15px;
         max-width: 60%;
-        background: #F3F3F3;
-        box-shadow: -20px -20px 20px #FFFFFF,
-            20px 20px 50px #D2D2D2;
+        background: #f3f3f3;
+        box-shadow: -20px -20px 20px #ffffff, 20px 20px 50px #d2d2d2;
         border: 4px solid #fff;
         overflow: hidden;
         transition: transform 1s ease 0s;
         transform: scale(1);
 
-        @media (max-width:$mobile) {
+        @media (max-width: $mobile) {
             max-width: 100%;
         }
 
@@ -55,7 +58,6 @@ h1 {
             /* Firefox */
             -ms-interpolation-mode: nearest-neighbor;
             /* IE */
-
         }
 
         // @media (any-hover: hover) {
@@ -70,9 +72,8 @@ h1 {
     &__descr {
         max-width: 40%;
         border-radius: 15px;
-        background: #F3F3F3;
-        box-shadow: -20px -20px 20px #FFFFFF,
-            20px 20px 50px #D2D2D2;
+        background: #f3f3f3;
+        box-shadow: -20px -20px 20px #ffffff, 20px 20px 50px #d2d2d2;
         border: 4px solid #fff;
         padding: rem(30) rem(20);
         padding-bottom: 15px;
@@ -80,7 +81,7 @@ h1 {
         @include adaptiveValue("line-height", 30, 15);
         font-weight: 500;
 
-        @media (max-width:$mobile) {
+        @media (max-width: $mobile) {
             max-width: 100%;
         }
 
@@ -91,20 +92,16 @@ h1 {
 }
 
 .servCab-tabs {
-
     // .servCab-tabs__body
 
     &__body {
-
         .body-tabs1 {
-
             // .body-tabs1__table
 
             &__table {
                 border-radius: 15px;
-                background: #F3F3F3;
-                box-shadow: -20px -20px 20px #FFFFFF,
-                    20px 20px 50px #D2D2D2;
+                background: #f3f3f3;
+                box-shadow: -20px -20px 20px #ffffff, 20px 20px 50px #d2d2d2;
                 border: 4px solid #fff;
                 padding: rem(20) rem(20);
                 margin: rem(30) 0;
@@ -142,10 +139,8 @@ h1 {
                         }
                     }
                 }
-
             }
         }
-
     }
 
     // .servCab-tabs__navigation
@@ -153,9 +148,8 @@ h1 {
     &__navigation {
         // border-bottom: 2px solid $mainBorder;
         border-radius: 15px;
-        background: #F3F3F3;
-        box-shadow: -20px -20px 20px #FFFFFF,
-            20px 20px 50px #D2D2D2;
+        background: #f3f3f3;
+        box-shadow: -20px -20px 20px #ffffff, 20px 20px 50px #d2d2d2;
         border: 4px solid #fff;
         padding: rem(10);
     }
@@ -167,7 +161,7 @@ h1 {
         font-weight: 500;
         line-height: 150%;
         @include adaptiveValue("font-size", 20, 16);
-        background: #F3F3F3;
+        background: #f3f3f3;
 
         &:not(:last-child) {
             padding-right: rem(15);
@@ -185,10 +179,16 @@ h1 {
     }
 
     .body-tabs1 {
-
         // .body-tabs1__up
 
-        &__up {}
+        &__up {
+
+            &-line {
+                border: 1px solid $mainBorder;
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
 
         // .body-tabs1__up-title
 
@@ -218,11 +218,13 @@ h1 {
 
         // .body-tabs1__advant
 
-        &__advant {}
+        &__advant {
+        }
 
         // .body-tabs1__down
 
-        &__down {}
+        &__down {
+        }
 
         // .body-tabs1__down-title
 
@@ -236,7 +238,8 @@ h1 {
         // .body-tabs1__down-descr
 
         &__down-descr {
-            padding: rem(15) rem(20) 0 rem(15);
+            // padding: rem(15) rem(20) 0 rem(15);
+            padding-top: rem(15);
 
             .spollers {
                 padding-bottom: rem(15);
@@ -260,19 +263,15 @@ h1 {
                 margin-top: -3px;
                 @include adaptiveValue("margin-left", 30, 0);
                 @include adaptiveValue("margin-right", 30, 5);
-                background: #EDEDED;
-                box-shadow: inset -20px -20px 50px #FFFFFF,
-                    inset 20px 20px 50px #CDCDCD;
-                box-shadow: inset -10px -10px 20px #FFFFFF,
-                    inset 10px 10px 20px rgba(0, 0, 0, 0.08);
+                background: #ededed;
+                box-shadow: inset -20px -20px 50px #ffffff, inset 20px 20px 50px #cdcdcd;
+                box-shadow: inset -10px -10px 20px #ffffff, inset 10px 10px 20px rgba(0, 0, 0, 0.08);
                 border-radius: 50%;
             }
-
         }
     }
 
     .servCab-spoll {
-
         // .cabin-spoll__item
 
         &__item {
@@ -312,11 +311,9 @@ h1 {
                 margin-top: -3px;
                 @include adaptiveValue("margin-left", 30, 0);
                 @include adaptiveValue("margin-right", 30, 5);
-                background: #EDEDED;
-                box-shadow: inset -20px -20px 50px #FFFFFF,
-                    inset 20px 20px 50px #CDCDCD;
-                box-shadow: inset -10px -10px 20px #FFFFFF,
-                    inset 10px 10px 20px rgba(0, 0, 0, 0.08);
+                background: #ededed;
+                box-shadow: inset -20px -20px 50px #ffffff, inset 20px 20px 50px #cdcdcd;
+                box-shadow: inset -10px -10px 20px #ffffff, inset 10px 10px 20px rgba(0, 0, 0, 0.08);
                 border-radius: 50%;
             }
 
@@ -336,9 +333,8 @@ h1 {
 
             .servCab-spoll__image {
                 max-width: rem(300);
-                background: #F3F3F3;
-                box-shadow: -20px -20px 20px #FFFFFF,
-                    20px 20px 50px #D2D2D2;
+                background: #f3f3f3;
+                box-shadow: -20px -20px 20px #ffffff, 20px 20px 50px #d2d2d2;
                 border: 4px solid #fff;
                 overflow: hidden;
                 float: left;
@@ -370,10 +366,10 @@ h1 {
     }
 
     .servCab-spoll1 {
-
         // .cabin-spoll1__item
 
-        &__item {}
+        &__item {
+        }
 
         // .cabin-spoll1__title
 
@@ -386,8 +382,8 @@ h1 {
             @include adaptiveValue("font-size", 18, 16);
             transition: color 0.8s ease 0s;
 
-            @media (any-hover: hover){
-                &:hover{
+            @media (any-hover: hover) {
+                &:hover {
                     color: $mainColor1;
                 }
             }
@@ -406,11 +402,9 @@ h1 {
                 margin-top: -3px;
                 @include adaptiveValue("margin-left", 30, 0);
                 @include adaptiveValue("margin-right", 30, 5);
-                background: #EDEDED;
-                box-shadow: inset -20px -20px 50px #FFFFFF,
-                    inset 20px 20px 50px #CDCDCD;
-                box-shadow: inset -10px -10px 20px #FFFFFF,
-                    inset 10px 10px 20px rgba(0, 0, 0, 0.08);
+                background: #ededed;
+                box-shadow: inset -20px -20px 50px #ffffff, inset 20px 20px 50px #cdcdcd;
+                box-shadow: inset -10px -10px 20px #ffffff, inset 10px 10px 20px rgba(0, 0, 0, 0.08);
                 border-radius: 50%;
             }
 
@@ -430,9 +424,8 @@ h1 {
 
             .servCab-spoll__image {
                 max-width: rem(300);
-                background: #F3F3F3;
-                box-shadow: -20px -20px 20px #FFFFFF,
-                    20px 20px 50px #D2D2D2;
+                background: #f3f3f3;
+                box-shadow: -20px -20px 20px #ffffff, 20px 20px 50px #d2d2d2;
                 border: 4px solid #fff;
                 overflow: hidden;
                 float: left;
@@ -464,10 +457,10 @@ h1 {
     }
 
     .servCab-spoll2 {
-
         // .cabin-spoll2__item
 
-        &__item {}
+        &__item {
+        }
 
         // .cabin-spoll2__title
 
@@ -500,13 +493,10 @@ h1 {
                 margin-top: rem(-3);
                 @include adaptiveValue("margin-left", 30, 0);
                 @include adaptiveValue("margin-right", 30, 5);
-                background: #EDEDED;
-                box-shadow: inset -20px -20px 50px #FFFFFF,
-                    inset 20px 20px 50px #CDCDCD;
-                box-shadow: inset -10px -10px 20px #FFFFFF,
-                    inset 10px 10px 20px rgba(0, 0, 0, 0.08);
+                background: #ededed;
+                box-shadow: inset -20px -20px 50px #ffffff, inset 20px 20px 50px #cdcdcd;
+                box-shadow: inset -10px -10px 20px #ffffff, inset 10px 10px 20px rgba(0, 0, 0, 0.08);
                 border-radius: 50%;
-
             }
 
             &._spoller-active {
@@ -533,10 +523,10 @@ h1 {
     }
 
     .servCab-spoll3 {
-
         // .cabin-spoll3__item
 
-        &__item {}
+        &__item {
+        }
 
         // .cabin-spoll3__title
 
@@ -569,11 +559,9 @@ h1 {
                 margin-top: rem(-3);
                 @include adaptiveValue("margin-left", 30, 0);
                 @include adaptiveValue("margin-right", 30, 5);
-                background: #EDEDED;
-                box-shadow: inset -20px -20px 50px #FFFFFF,
-                    inset 20px 20px 50px #CDCDCD;
-                box-shadow: inset -10px -10px 20px #FFFFFF,
-                    inset 10px 10px 20px rgba(0, 0, 0, 0.08);
+                background: #ededed;
+                box-shadow: inset -20px -20px 50px #ffffff, inset 20px 20px 50px #cdcdcd;
+                box-shadow: inset -10px -10px 20px #ffffff, inset 10px 10px 20px rgba(0, 0, 0, 0.08);
                 border-radius: 50%;
             }
 
@@ -594,9 +582,8 @@ h1 {
 
             .servCab-spol3__image {
                 max-width: rem(300);
-                background: #F3F3F3;
-                box-shadow: -20px -20px 20px #FFFFFF,
-                    20px 20px 50px #D2D2D2;
+                background: #f3f3f3;
+                box-shadow: -20px -20px 20px #ffffff, 20px 20px 50px #d2d2d2;
                 border: 4px solid #fff;
                 overflow: hidden;
                 float: left;
@@ -604,7 +591,7 @@ h1 {
                 margin-bottom: rem(10);
                 border-radius: 6px;
 
-                @media (max-width:484px) {
+                @media (max-width: 484px) {
                     width: 100%;
                     float: none;
                 }
@@ -633,10 +620,10 @@ h1 {
     }
 
     .servCab-spoll6 {
-
         // .cabin-spoll6__item
 
-        &__item {}
+        &__item {
+        }
 
         // .cabin-spoll6__title
 
@@ -669,13 +656,10 @@ h1 {
                 margin-top: rem(-3);
                 @include adaptiveValue("margin-left", 30, 0);
                 @include adaptiveValue("margin-right", 30, 5);
-                background: #EDEDED;
-                box-shadow: inset -20px -20px 50px #FFFFFF,
-                    inset 20px 20px 50px #CDCDCD;
-                box-shadow: inset -10px -10px 20px #FFFFFF,
-                    inset 10px 10px 20px rgba(0, 0, 0, 0.08);
+                background: #ededed;
+                box-shadow: inset -20px -20px 50px #ffffff, inset 20px 20px 50px #cdcdcd;
+                box-shadow: inset -10px -10px 20px #ffffff, inset 10px 10px 20px rgba(0, 0, 0, 0.08);
                 border-radius: 50%;
-
             }
 
             &._spoller-active {
@@ -702,10 +686,10 @@ h1 {
     }
 
     .servCab-spoll9 {
-
         // .cabin-spoll9__item
 
-        &__item {}
+        &__item {
+        }
 
         // .cabin-spoll9__title
 
@@ -738,14 +722,12 @@ h1 {
                 margin-top: rem(-3);
                 @include adaptiveValue("margin-left", 30, 0);
                 @include adaptiveValue("margin-right", 30, 5);
-                background: #EDEDED;
-                box-shadow: inset -20px -20px 50px #FFFFFF,
-                    inset 20px 20px 50px #CDCDCD;
-                box-shadow: inset -10px -10px 20px #FFFFFF,
-                    inset 10px 10px 20px rgba(0, 0, 0, 0.08);
+                background: #ededed;
+                box-shadow: inset -20px -20px 50px #ffffff, inset 20px 20px 50px #cdcdcd;
+                box-shadow: inset -10px -10px 20px #ffffff, inset 10px 10px 20px rgba(0, 0, 0, 0.08);
                 border-radius: 50%;
 
-                @media (max-width:$mobileSmall) {
+                @media (max-width: $mobileSmall) {
                     flex: 1 0 auto;
                 }
             }
@@ -767,9 +749,8 @@ h1 {
 
             .servCab-spol9__image {
                 max-width: rem(200);
-                background: #F3F3F3;
-                box-shadow: -20px -20px 20px #FFFFFF,
-                    20px 20px 50px #D2D2D2;
+                background: #f3f3f3;
+                box-shadow: -20px -20px 20px #ffffff, 20px 20px 50px #d2d2d2;
                 border: 4px solid #fff;
                 overflow: hidden;
                 float: left;
@@ -777,7 +758,7 @@ h1 {
                 margin-bottom: rem(20);
                 border-radius: 6px;
 
-                @media (max-width:424px) {
+                @media (max-width: 424px) {
                     width: 100%;
                     float: none;
                 }
@@ -806,10 +787,10 @@ h1 {
     }
 
     .servCab-spoll10 {
-
         // .cabin-spoll10__item
 
-        &__item {}
+        &__item {
+        }
 
         // .cabin-spoll10__title
 
@@ -842,13 +823,10 @@ h1 {
                 margin-top: rem(-3);
                 @include adaptiveValue("margin-left", 30, 0);
                 @include adaptiveValue("margin-right", 30, 5);
-                background: #EDEDED;
-                box-shadow: inset -20px -20px 50px #FFFFFF,
-                    inset 20px 20px 50px #CDCDCD;
-                box-shadow: inset -10px -10px 20px #FFFFFF,
-                    inset 10px 10px 20px rgba(0, 0, 0, 0.08);
+                background: #ededed;
+                box-shadow: inset -20px -20px 50px #ffffff, inset 20px 20px 50px #cdcdcd;
+                box-shadow: inset -10px -10px 20px #ffffff, inset 10px 10px 20px rgba(0, 0, 0, 0.08);
                 border-radius: 50%;
-
             }
 
             &._spoller-active {
@@ -876,7 +854,6 @@ h1 {
 }
 
 .servCab-spoll {
-
     // .cabin-spoll__item
 
     &__item {
@@ -916,11 +893,9 @@ h1 {
             margin-top: -3px;
             @include adaptiveValue("margin-left", 30, 0);
             @include adaptiveValue("margin-right", 30, 5);
-            background: #EDEDED;
-            box-shadow: inset -20px -20px 50px #FFFFFF,
-                inset 20px 20px 50px #CDCDCD;
-            box-shadow: inset -10px -10px 20px #FFFFFF,
-                inset 10px 10px 20px rgba(0, 0, 0, 0.08);
+            background: #ededed;
+            box-shadow: inset -20px -20px 50px #ffffff, inset 20px 20px 50px #cdcdcd;
+            box-shadow: inset -10px -10px 20px #ffffff, inset 10px 10px 20px rgba(0, 0, 0, 0.08);
             border-radius: 50%;
         }
 
@@ -940,9 +915,8 @@ h1 {
 
         .servCab-spoll__image {
             max-width: rem(300);
-            background: #F3F3F3;
-            box-shadow: -20px -20px 20px #FFFFFF,
-                20px 20px 50px #D2D2D2;
+            background: #f3f3f3;
+            box-shadow: -20px -20px 20px #ffffff, 20px 20px 50px #d2d2d2;
             border: 4px solid #fff;
             overflow: hidden;
             float: left;
@@ -976,7 +950,6 @@ h1 {
 //========================================================================================================================================================
 
 .servCab-price {
-
     // .servCab-price__title
 
     &__title {
@@ -1012,9 +985,8 @@ h1 {
         display: flex;
         flex-direction: column;
         width: rem(280);
-        background: #F3F3F3;
-        box-shadow: -20px -20px 30px #FFFFFF,
-            20px 20px 50px #D2D2D2;
+        background: #f3f3f3;
+        box-shadow: -20px -20px 30px #ffffff, 20px 20px 50px #d2d2d2;
         border-radius: 15px;
         height: 430px;
         overflow: hidden;
@@ -1048,7 +1020,8 @@ h1 {
 
     // .servCab-price__descr
 
-    &__descr {}
+    &__descr {
+    }
 }
 
 .descr-cabPrice {
@@ -1084,7 +1057,7 @@ h1 {
             display: inline-block;
 
             &::after {
-                content: '';
+                content: "";
                 transition: all 0.8s ease 0s;
                 width: 0;
                 height: rem(2);
@@ -1095,7 +1068,6 @@ h1 {
 
             @media (any-hover: hover) {
                 &:hover {
-
                     &::after {
                         width: 100%;
                     }
@@ -1108,7 +1080,7 @@ h1 {
             transition: all 0.8s ease 0s;
 
             &::after {
-                content: '';
+                content: "";
                 transition: all 0.8s ease 0s;
                 width: 0;
                 height: rem(2);
@@ -1119,7 +1091,6 @@ h1 {
 
             @media (any-hover: hover) {
                 &:hover {
-
                     &::after {
                         width: 100%;
                     }
@@ -1140,8 +1111,7 @@ h1 {
         &._tab-active {
             .adv-item__icon {
                 background: #c7c7c7;
-                box-shadow: inset -20px -20px 50px #e1e1e1,
-                    inset 20px 20px 50px #dfdfdf;
+                box-shadow: inset -20px -20px 50px #e1e1e1, inset 20px 20px 50px #dfdfdf;
             }
 
             .adv-item__img {
