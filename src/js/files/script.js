@@ -503,7 +503,7 @@ $('.tech-office-form').on('submit', function (event) {
 
 // для отправки формы в телеграм техобслуживание магазинов
 
-$('.tech-shop-form').on('submit', function (event) {
+$('.tech-shop').on('submit', function (event) {
 
     event.stopPropagation();
     event.preventDefault();
@@ -520,7 +520,7 @@ $('.tech-shop-form').on('submit', function (event) {
     data.append('page', 'shop');
     data.append('name', $(' [name="name"]', form).val());
     data.append('phone', $(' [name="phone"]', form).val());
-    data.append('площадь', $(' [name="tech-shop-square"]', form).val());
+    data.append('площадь', $(' [name="tech-shop"]', form).val());
     data.append('количество выездов', $(' [name="shop-exit"]', form).val());
     data.append('количество часов', $(' [name="shop-hours"]', form).val());
     if ($('#shopToFire').prop("checked")) {
