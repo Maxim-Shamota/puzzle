@@ -283,7 +283,7 @@ h1 {
                 padding-bottom: rem(15);
             }
 
-            h3 {
+            &_item {
                 display: flex;
                 padding-bottom: rem(15);
                 @include adaptiveValue("font-size", 18, 16);
