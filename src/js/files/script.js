@@ -221,10 +221,10 @@ window.onload = function () {
 }
 
 //Бургер
-const iconMenu = document.querySelector('.header-menu__up__container');
+const iconMenu = document.querySelector('.icon-menu');
 
 if (iconMenu) {
-    const menuBody = document.querySelector('.header-menu__down');
+    const menuBody = document.querySelector('.menu__body');
     iconMenu.addEventListener("click", function (e) {
         document.body.classList.toggle('lock');
         iconMenu.classList.toggle('menu-active');

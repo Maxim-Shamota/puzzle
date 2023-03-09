@@ -42,6 +42,8 @@
 		.header-menu__middle-logo {
 			padding: rem(0) rem(20);
 
+			box-shadow: none;
+
 			img {
 				@include adaptiveValue("height", 60, 50);
 			}
@@ -474,7 +476,7 @@
 				z-index: 2;
 			}
 
-			.menu-active & {
+			&.menu-active {
 				left: 0;
 
 				&::before {
@@ -612,11 +614,11 @@
 	}
 
 	&__link {
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		color: inherit;
 		transition: color 0.8s ease 0s;
 		@include adaptiveValue("margin-right", 10, 4);
-		font-size: rem(14);
+		font-size: rem(18);
 
 		&-a {
 			&::after {
