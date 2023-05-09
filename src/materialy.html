@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Материалы для душевой кабины",
+"description":"Компания 'Боб-мастер' предлагает профессиональные материалы для душевой кабины"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="fixCabs-page">
+
+			<div class="fixCabs-page__container">
+				<h1 class="servCab-up__title">Запасные части и инструменты для душевой кабины</h1>
+
+				<div class="servCab-tabs">
+					<div data-tabs-body class="servCab-tabs__content">
+
+						<div class="fixRolls-tabs__body fixRolls-price">
+							@@include('html/_price.htm')
+						</div>
+					</div>
+				</div>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
