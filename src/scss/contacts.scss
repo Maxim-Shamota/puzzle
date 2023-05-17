@@ -22,4 +22,16 @@
         }
     }
 
+    .servCab-up__image-large {
+        @media (max-width:$mobile){
+              display: none;
+        }
+    }
+
+    .servCab-up__image-small {
+        @media (min-width:$mobile){
+              display: none;
+        }
+    }
+
 }
