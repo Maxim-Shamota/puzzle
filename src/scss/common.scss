@@ -78,6 +78,8 @@ h3 {
     display: flex;
     @include adaptiveValue("gap", 30, 20);
     @include adaptiveValue("padding-bottom", 30, 20);
+    align-items: center;
+    justify-content: space-between;
 
     @media (max-width: $mobile) {
         flex-direction: column;
