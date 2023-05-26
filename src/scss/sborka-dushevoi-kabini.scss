@@ -1,12 +1,6 @@
 //========================================================================================================================================================
 
 .cabin-page {
-    // @include adaptiveValue("padding-top", 50, 20);
-    @include adaptiveValue("padding-bottom", 30, 20);
-
-    // .servCab-page__container
-
-    &__container {}
 
     .servCab-price__image {
         img {
