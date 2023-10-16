@@ -1,0 +1,63 @@
+.kamen-photo {
+    // .kamen-photo__wrapper
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include adaptiveValue("gap", 30, 20);
+        @include adaptiveValue("padding-top", 30, 20);
+        @include adaptiveValue("padding-bottom", 30, 20);
+        max-height: 650px;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
+    }
+
+    // .kamen-photo__video
+
+    &__video {
+        position: relative;
+        border-radius: 15px;
+        border: 4px solid #fff;
+        overflow: hidden;
+        background: #f3f3f3;
+        width: 30%;
+        min-height: 250px;
+        box-shadow: -20px -20px 20px #ffffff, 20px 20px 50px #d2d2d2;
+
+        &_item {
+            // width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        @media (max-width: $tablet) {
+            width: 40%;
+        }
+
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+
+    // .kamen-photo__descr
+
+    &__descr {
+        width: 70%;
+        line-height: 400%;
+        @include adaptiveValue("font-size", 18, 16);
+        text-indent: rem(30);
+
+        @media (max-width: $tablet) {
+            line-height: 200%;
+        }
+
+        @media (max-width: $mobile) {
+            line-height: 120%;
+            width: 100%;
+        }
+    }
+}
