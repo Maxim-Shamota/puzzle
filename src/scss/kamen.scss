@@ -47,7 +47,7 @@
 
     &__descr {
         width: 70%;
-        line-height: 400%;
+        line-height: 300%;
         @include adaptiveValue("font-size", 18, 16);
         text-indent: rem(30);
 

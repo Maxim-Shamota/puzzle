@@ -226,6 +226,7 @@
             position: relative;
             display: flex;
             text-align: center;
+            flex-direction: column;
 
             a {
                 padding-right: rem(10);

@@ -121,6 +121,8 @@
 				margin: rem(10) 0;
 
 				.spollers__item {
+					display: flex;
+					flex-direction: column;
 					width: 171px;
 					font-size: rem(16);
 					color: #fff;
@@ -310,7 +312,7 @@
 		.spollers__item {
 			position: relative;
 			display: flex;
-			justify-content: space-between;
+			flex-direction: column;
 
 			a {
 				padding-right: rem(10);
@@ -336,21 +338,6 @@
 
 				@media (max-width: 330px) {
 					margin-left: rem(-10);
-				}
-			}
-
-			.spollers__body {
-				position: absolute;
-				top: 100%;
-				width: 122%;
-				left: rem(-20);
-				background-color: #f3f3f3;
-				padding: rem(10);
-				padding-bottom: rem(5);
-				border-radius: 0 0 12px 12px;
-
-				@media (max-width: $tablet) {
-					background-color: #2d2d2d;
 				}
 			}
 		}
