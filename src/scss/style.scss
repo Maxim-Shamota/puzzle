@@ -20,7 +20,8 @@ $fontSize: rem(18); // где 14(px) - размер шрифта по умолч
 // Основные цвета
 $mainColor: rgba(31, 31, 31, 1); // Цвет шрифта по умолчанию
 $mainColor1: #12b7b6; 
-$mainColor2: #2D2D2D;
+$mainColor2: #c17db3;
+$mainColor3: #c2b753;
 $mainBorder: #b0b0b04a;
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
@@ -137,20 +138,4 @@ body {
 @import "footer";
 
 // Подключение стилей отдельных страниц
-@import "advantage";
-@import "contacts";
-@import "stock";
-@import "stockFurniture";
-@import "servis-dushevih-kabin";
-@import "glavnaya-master-na-chas";
-@import "sborka-dushevoi-kabini";
-@import "remont-dushevogo-poddona";
-@import "tehobsluzhivanie-ofisov";
-@import "tehobsluzhivanie-magazinov";
-@import "sborka-kuhni";
-@import "sborka-mebeli";
-@import "remont-mebeli";
-@import "articles";
-@import "otzivi";
-@import "price";
-@import "kamen";
+@import "index";
