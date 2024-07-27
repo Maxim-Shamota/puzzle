@@ -11,29 +11,94 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 			<div class="main-page__container">
+		
+				<!-- Блок для выбора даты рождения -->
 				<div class="input__container">
-					<select id="year">
+					<h2>День рождения</h2>
+					<select id="birthYear">
 						<option value="">Выберите год</option>
 					</select>
-					<select id="month">
+					<select id="birthMonth">
 						<option value="">Выберите месяц</option>
 					</select>
-					<select id="day">
+					<select id="birthDay">
 						<option value="">Выберите день</option>
 					</select>
-					<a href="#" class="link-btn" id="calculateLink">Рассчитать</a>
 				</div>
 		
+				<!-- Блок для выбора текущей даты -->
+				<div class="input__container">
+					<h2>Текущая дата</h2>
+					<select id="currentYear">
+						<option value="">Выберите год</option>
+					</select>
+					<select id="currentMonth">
+						<option value="">Выберите месяц</option>
+					</select>
+					<select id="currentDay">
+						<option value="">Выберите день</option>
+					</select>
+				</div>
+		
+				<a href="#" class="link-btn" id="calculateLink">Рассчитать</a>
+		
+				<!-- Результаты -->
 				<div id="result" class="result">
-					<div>1. День рождения: <span id="dayResult"></span></div>
-					<div>2. Месяц рождения: <span id="monthResult"></span></div>
-					<div>3. Год рождения (склад числа): <span id="yearResult"></span></div>
-					<div>4. Результат 1 + 2: <span id="sumDayMonth"></span></div>
-					<div>5. Результат 2 + 3: <span id="sumMonthYear"></span></div>
-					<div>6. Результат 4 + 5: <span id="finalResult"></span></div>
+					<div class="heartOfCode">
+						<div>1. День рождения: <span id="dayResult"></span></div>
+						<div>2. Месяц рождения: <span id="monthResult"></span></div>
+						<div>3. Год рождения: <span id="yearResult"></span></div>
+						<div>4. Результат 1 + 2: <span id="sumDayMonth"></span></div>
+						<div>5. Результат 2 + 3: <span id="sumMonthYear"></span></div>
+						<div>6. Результат 4 + 5: <span id="finalResult"></span></div>
+					</div>
+					<div class="lcgResult">ЛЧГ: <span id="lcgResult"></span></div>
+					<div class="mainNumbers">
+						<div>Сценарий года: <span id="yearScenario"></span></div>
+						<div>Урок: <span id="lesson"></span></div>
+						<div>Экзамен года: <span id="yearExam"></span></div>
+						<div>Ключевой Аркан 1: <span id="keyArc1"></span></div>
+						<div>Ключевой Аркан 2: <span id="keyArc2"></span></div>
+						<div>Ключевой Аркан 3: <span id="keyArc3"></span></div>
+					</div>
+					<div class="resurses">
+						<div>Ресурс года: <span id="resourceYear"></span></div>
+						<div>Дает энергию: <span id="givesEnergy"></span></div>
+						<div>Возможности: <span id="possibilities"></span></div>
+					</div>
+					<div class="tension">
+						<div>Напряжение: <span id="voltage"></span></div>
+						<div>Забирает энергию: <span id="takesEnergy"></span></div>
+						<div>Препятствие: <span id="barrier"></span></div>
+					</div>
+					<div class="years">
+						<div>Идея года: <span id="idea"></span></div>
+						<div>Помощник года: <span id="assistant"></span></div>
+						<div>Задача года: <span id="taskYear"></span></div>
+					</div>
+					<div class="months">
+						<div>Расчет мес1: <span id="month1"></span></div>
+						<div>Расчет мес2: <span id="month2"></span></div>
+						<div>Расчет мес3: <span id="month3"></span></div>
+						<div>Расчет мес4: <span id="month4"></span></div>
+						<div>Расчет мес5: <span id="month5"></span></div>
+						<div>Расчет мес6: <span id="month6"></span></div>
+						<div>ЛЧМ: <span id="lcm"></span></div>
+						<div>Задача месяца: <span id="taskMonth"></span></div>
+					</div>
+					<div class="days">
+						<div>Расчет дня 1: <span id="day1"></span></div>
+						<div>Расчет дня 2: <span id="day2"></span></div>
+						<div>Расчет дня 3: <span id="day3"></span></div>
+						<div>Расчет дня 4: <span id="day4"></span></div>
+						<div>Расчет дня 5: <span id="day5"></span></div>
+						<div>Расчет дня 6: <span id="day6"></span></div>
+						<div>ЛЧД: <span id="lcd"></span></div>
+						<div>Задача дня: <span id="taskDay"></span></div>
+					</div>
 				</div>
 			</div>
-
+		
 			<!-- Pop-up Window Structure -->
 			<div id="popup" class="popup">
 				<div class="popup-content">

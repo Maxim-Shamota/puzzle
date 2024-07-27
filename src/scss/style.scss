@@ -54,7 +54,9 @@ $responsiveType: 1;
 
 body {
 	// background: #E9EAF0;
-	background: #F3F3F3;
+	// background: #F3F3F3;
+	background-image: url(../img/main-page/111.jpg);
+	color: $mainColor;
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -70,6 +72,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	background: #ccfefddb;
 	// Прижимаем footer
 	> main {
 		flex: 1 1 auto;
